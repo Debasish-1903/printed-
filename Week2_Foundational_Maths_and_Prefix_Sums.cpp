@@ -12,7 +12,8 @@ Ax + By = C
 
 Given three positive integers A, B and C.
 
-You have to determine whether there exists at least one solution for some integers value of x and y where x,
+You have to determine whether there exists at least one solution for some 
+integers value of x and y where x,
  y may be negative or non-negative integers.
 
 
@@ -24,7 +25,8 @@ Each of the next T lines contains three positive integers A, B, C (1 ≤ A, B, C
 
 Output Format
 
-Print "Yes" (without quotes) if at least one solution exits, otherwise print "No" (without quotes).
+Print "Yes" (without quotes) if at least one solution exits,
+ otherwise print "No" (without quotes).
 
 
 Sample Input 1
@@ -48,7 +50,8 @@ Explanation 1:
 For x = 1, y = 3, 6 * 1 + 9 * 3 = 33. The equation is satisfied for (1, 3).
 
 Explanation 2:
-No solution exists in this case. Observe that A and B are even numbers. So Ax + By is always even number, irrespective of the value of x and y.
+No solution exists in this case. Observe that A and B are even 
+numbers. So Ax + By is always even number, irrespective of the value of x and y.
 But C is an odd number. So no solution exists in this case.*/
 
 ll gcd(ll a, ll b){
@@ -104,7 +107,8 @@ You are given an integer N. You have to find the number of divisors of N.
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - 
+the number of test cases. Then T test cases follow.
 
 The first line of each test case contains one integer N.
 
@@ -179,14 +183,16 @@ You are given an integer N. You have to tell whether the number is prime or not.
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases. Then T
+ test cases follow.
 
 The first line of each test case contains one integer N.
 
 
 Output Format
 
-For each test case, print “YES” if the number is prime and “NO” if the number is not prime.
+For each test case, print “YES” if the number is prime and 
+“NO” if the number is not prime.
 
 
 Constraints
@@ -213,7 +219,8 @@ Note
 
 For the first test case, divisors of 5 are 1 and 5, so it is a prime number.
 
-For the second test case, divisors of 12 are 1, 2, 3, 4, 6 and 12, so it is not a prime number.
+For the second test case, divisors of 12 are 1, 2, 3, 4, 6 and 12, 
+so it is not a prime number.
 
 For the third test case, divisors of 37 are 1 and 37, so it is a prime number.*/
 
@@ -366,14 +373,16 @@ Relevant For:
 Description
 
 There are N piles of stones in front of you. ith pile contains Ai number of stones.
-You want to find whether it is possible to split each pile into 1 or more piles of X (≥ 2) stones such that each 
+You want to find whether it is possible to split each pile into 1 or
+ more piles of X (≥ 2) stones such that each 
 splitted-pile has exactly X stones.
 Note that X should be the same for each pile.
 
 
 Input Format
 
-The first line contains T (1 ≤ T ≤ 100000), the number of test cases. The description of each test case is as follows:
+The first line contains T (1 ≤ T ≤ 100000), the number of test cases. 
+The description of each test case is as follows:
 The first line contains N, the number of piles (1 ≤ N ≤ 100000).
 The second line contains N space-separated positive integers A1, A2, ..., AN (2 ≤ Ai ≤ 109).
 It is guaranteed that sum of N over all test cases doesn't exceed 106.
@@ -381,7 +390,8 @@ It is guaranteed that sum of N over all test cases doesn't exceed 106.
 
 Output Format
 
-For each test case, print "Yes" (without quotes) if it is possible to split. Otherwise, print "No" (without quotes).
+For each test case, print "Yes" (without quotes) if it is possible to split. 
+Otherwise, print "No" (without quotes).
 
 
 Sample Input 1
@@ -450,14 +460,16 @@ Difficulty : **
  Memory: 256 MB Accepted Submissions: 100
 Relevant For:
 Description
-Given two integers representing the numerator and denominator of a fraction, print the fraction in string format.
+Given two integers representing the numerator and denominator of a fraction, 
+print the fraction in string format.
 If the fractional part is repeating, enclose the repeating part in parentheses.
 If multiple answers are possible, print the one which has the smallest length.
 
 Input Format
 
 The first line contains T (1 ≤ T ≤ 100000), the number of test cases.
-Each of the next T lines contains two space-separated integers representing numerator and denominator respectively 
+Each of the next T lines contains two space-separated integers representing 
+numerator and denominator respectively 
 (0 ≤ |numerator| ≤ 100 and 1 ≤ |denominator| ≤ 100).
 It is guaranteed that the denominator is always a non-zero integer.
 
@@ -498,7 +510,8 @@ Explanation 2:
 2 / 1 = 2
 
 Explanation 3:
-2 / 3 = 0.(6). Note that 0.(66) is also the correct representation in decimal format, but it has a greater 
+2 / 3 = 0.(6). Note that 0.(66) is also the correct representation in 
+decimal format, but it has a greater 
 length than 0.(6).
 
 
@@ -592,7 +605,8 @@ convex polygon (3 ≤ N ≤ 109).
 
 Output Format
 
-For each test case, print a single number denoting the number of diagonals in the convex N-gon.
+For each test case, print a single number denoting the number of 
+diagonals in the convex N-gon.
  Since answer can be large,
  print it with modulo 1000000007.
 
@@ -682,8 +696,10 @@ Difficulty :
 Relevant For:
 Description
 
-You have given a grid of N x M. You are initially at position A(0, 0) and you want to reach B(N, M). 
-From the given cell (i, j), we are allowed to move to cells (i + 1, j) and (i, j + 1) only.
+You have given a grid of N x M. You are initially at position A(0, 0) 
+and you want to reach B(N, M). 
+From the given cell (i, j), we are allowed to move to cells (i + 1, j) and 
+(i, j + 1) only.
 Find the number of different ways to reach B from A?
  
 
@@ -697,7 +713,8 @@ Each of the next T lines contains two positive integers N, M (1 ≤ N, M ≤ 105
 
 Output Format
 
-For each test case, print the number of ways to reach B from A. Since answer can be large, print it with modulo 1000000007.
+For each test case, print the number of ways to reach B from A. 
+Since answer can be large, print it with modulo 1000000007.
 
 
 Sample Input 1
@@ -781,20 +798,22 @@ Difficulty :
 Relevant For:
 Description
 
-You have given Convex N-gon. Draw all diagonals of the convex N-gon. Suppose no three diagonals pass through a point.
+You have given Convex N-gon. Draw all diagonals of the convex N-gon. 
+Suppose no three diagonals pass through a point.
 Into how many parts is the N-gon divided?
 
 
 Input Format
 
 The first line contains T (1 ≤ T ≤ 100000), the number of test cases.
-Each of the next T lines contains a positive integer N denoting the number of sides of convex polygon (3 ≤ N ≤ 109).
+Each of the next T lines contains a positive integer N denoting the
+ number of sides of convex polygon (3 ≤ N ≤ 109).
 
 
 Output Format
 
-For each test case, print a single number denoting the number of parts the convex N-gon divided. Since answer can be large, 
-print it with modulo 1000000007.
+For each test case, print a single number denoting the number of parts the
+convex N-gon divided. Since answer can be large, print it with modulo 1000000007.
 
 
 Sample Input 1
@@ -892,18 +911,21 @@ Difficulty :
 Relevant For:
 Description
 
-Find the number of unordered pairs of intersecting diagonals in the Convex N-gon. The intersecting point should be inside the polygon.
+Find the number of unordered pairs of intersecting diagonals in the Convex N-gon.
+ The intersecting point should be inside the polygon.
 
 
 Input Format
 
 The first line contains T (1 ≤ T ≤ 100000), the number of test cases.
-Each of the next T lines contains a positive integer N denoting the number of sides of convex polygon (3 ≤ N ≤ 109).
+Each of the next T lines contains a positive integer N denoting the number
+ of sides of convex polygon (3 ≤ N ≤ 109).
 
 
 Output Format
 
-For each test case, print a single number denoting the number of intersecting diagonals in the convex N-gon. 
+For each test case, print a single number denoting the number of
+ intersecting diagonals in the convex N-gon. 
 Since answer can be large, print it with modulo 1000000007.
 
 
@@ -995,13 +1017,15 @@ Operators follow the same precedence rules as in mathematics.
 Input Format
 
 The first line contains T (1 ≤ T ≤ 100000), the number of test cases.
-Each of the next T lines contains an equation in the form (a op1 b op2 c) mod p (1 ≤ a, b, c, p ≤ 109).
+Each of the next T lines contains an equation in the form (a op1 b op2 c) 
+mod p (1 ≤ a, b, c, p ≤ 109).
 It is guaranteed that (a, p) = (b, p) = (c, p) = 1 and p is a prime number.
 
 
 Output Format
 
-For each test case, print a single number denoting the value of the equation. Since it is mod p, the value must belong to 0 to p - 1.
+For each test case, print a single number denoting the value of the equation.
+ Since it is mod p, the value must belong to 0 to p - 1.
 
 
 Sample Input 1
@@ -1124,7 +1148,8 @@ Next Q lines contain two space-separated integers L, R where 1<=L<=R<=N.
 
 Output Format
 
-For each query print the value of (A[L] + A[L+1] + A[L+2] + A[L+3]...A[R]) % 10^9+7 in a new line.
+For each query print the value of (A[L] + A[L+1] + A[L+2] + A[L+3]...A[R]) % 10^9+7 
+in a new line.
 
 
 Sample Input 1
@@ -1225,17 +1250,21 @@ Difficulty :
 Relevant For:
 Description
 
-There are N students and ith student likes all numbers in the range [li ,ri ], both inclusive. 
+There are N students and ith student likes all numbers in the range [li ,ri ],
+ both inclusive. 
 A number is good if it is liked by at least K students.
 
-You are even Q queries. Each query consists of two numbers L, R. You have to find how many numbers in the range [L,R] is good.
+You are even Q queries. Each query consists of two numbers L, R. You have to 
+find how many numbers in the range [L,R] is good.
 
 
 Input Format
 
-The first line of input contains three integers, N, K (1≤K≤N<=1000000), and Q (1≤Q≤1000000).
+The first line of input contains three integers, N, K (1≤K≤N<=1000000), and
+ Q (1≤Q≤1000000).
 
-The next N lines contain two integers li and ri (1≤li≤ri≤1000000), describing that the i-th student likes all the numbers [li,ri].
+The next N lines contain two integers li and ri (1≤li≤ri≤1000000), 
+describing that the i-th student likes all the numbers [li,ri].
 
 The next Q lines contain L and R, (1≤L≤R≤1000000).
 
@@ -1328,30 +1357,39 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You recently bought a new mobile phone. There are N applications in the phone and all generate notifications.
+You recently bought a new mobile phone. There are N applications 
+in the phone and all generate notifications.
  There are 3 types of events
 
 1 X - A new notification is generated by application X
-2 X - You read all notifications by application X, you may re-read some notifications
-3 Y - You read the first Y notifications in the phone. Note that you don’t read the first Y unread notifications,
- you just read the first Y notifications and you might re-read a few notifications. It is guaranteed that there have 
+2 X - You read all notifications by application X, you may re-read 
+some notifications
+3 Y - You read the first Y notifications in the phone. Note that 
+you don’t read the first Y unread notifications,
+ you just read the first Y notifications and you might re-read a 
+ few notifications. It is guaranteed that there have 
  been Y notifications before this. 
-After every event, find the number of unread notifications in the mobile phone.
+After every event, find the number of unread notifications in the 
+mobile phone.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of
+ test cases. Then T test cases follow.
 
-The first line of each test case contains two space-separated integers N Q - the number of applications
+The first line of each test case contains two space-separated 
+integers N Q - the number of applications
  and the number of queries.
 
-Each of the next Q lines contains two space-separated integers Z X or Z Y - the description of each event.
+Each of the next Q lines contains two space-separated integers 
+Z X or Z Y - the description of each event.
 
 
 Output Format
 
-For each test case, find the number of unread notifications in the mobile phone after every event.
+For each test case, find the number of unread notifications
+ in the mobile phone after every event.
 
 
 Constraints
@@ -1366,7 +1404,8 @@ Constraints
 
 1≤ Y ≤ Q
 
-It is guaranteed that the sum of N and the sum of Q over all test cases does not exceed 106.
+It is guaranteed that the sum of N and the sum of Q over
+ all test cases does not exceed 106.
 
 
 Sample Input 1
@@ -1466,21 +1505,26 @@ Difficulty : **
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given a string S. You are given Q queries of two types, asking the number of distinct 
+You are given a string S. You are given Q queries of two types,
+ asking the number of distinct 
 characters in the range [L, R] 
 and changing the i-th character to c. (1-based indexing)
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of
+ test cases. Then T test cases follow.
 
 The first line of each test contains a string S.
 
-The second line of each test case contains one integer Q - the number of queries. 
+The second line of each test case contains one integer Q -
+ the number of queries. 
 
-Each of the next Q lines contain two types of queries: either 1 i c or 2 L R. The query 1 is 
-for changing the i-th character to c and the query 2 is for finding the number 
+Each of the next Q lines contain two types of queries: 
+either 1 i c or 2 L R. The query 1 is 
+for changing the i-th character to c and the query 2 is for 
+finding the number 
 of distinct characters in the range [L, R].
 
 
@@ -1499,7 +1543,8 @@ Constraints
 
 1≤ Ai ≤ 105
 
-It is guaranteed that the sum of |S| and the sum of Q over all test cases does not exceed 105.
+It is guaranteed that the sum of |S| and the sum of Q over all test 
+cases does not exceed 105.
 
 
 Sample Input 1
@@ -1576,7 +1621,8 @@ Difficulty : ***
 Relevant For:202,301,201
 Description 
 
-You have been given an array A of N integers and M ranges. ith range is defined by the two integers li and ri, li≤ri.
+You have been given an array A of N integers and M ranges. ith range is defined by the two integers 
+li and ri, li≤ri.
 
 Initially, array S is empty. For range i, add elements A[li],A[li+1]…..A[ri] in the array S. 
 After adding all the elements in each of the range, sort the elements of S in ascending order.
@@ -1594,18 +1640,19 @@ Then T test cases follow.
 
 The first line of each test case contains three integers N, M, and Q, (1 ≤ N, M, Q ≤ 10^5).
 
-The second line contains N space-separated integers A1, A2,….,AN, the elements of the array A, (1≤Ai≤10^9).
+The second line contains N space-separated integers A1, A2,….,AN, the elements of 
+the array A, (1≤Ai≤10^9).
 
 Next M lines contain two space-separated integers li and ri - ith range, (1 ≤ li ≤ ri ≤ N).
 
-The last line of a test case contains Q space-separated integers K1, K2,….,KQ, where Ki denotes
- the ith query. (1 ≤ Ki ≤1 0^18).
+The last line of a test case contains Q space-separated integers K1, K2,….,KQ, where Ki
+ denotes the ith query. (1 ≤ Ki ≤1 0^18).
 
 
 Output Format
 
-For each test case, print Q space-separated integers, where ith number denotes the answer of ith query.
- If the Kth value doesn't exist for a particular query, print -1.
+For each test case, print Q space-separated integers, where ith number denotes the answer 
+of ith query.If the Kth value doesn't exist for a particular query, print -1.
 
 
 Sample Input 1
@@ -1699,23 +1746,25 @@ Difficulty :
 Relevant For:
 Description
 
-Given a 2d-array of dimension N*M and Q queries. In each query four integers x1, y1, x2, y2 is given, 
-you have to find the sum of submatrix with (x1,y1) be the leftmost corner and (x2,y2) be the rightmost corner %10^9+7.
+Given a 2d-array of dimension N*M and Q queries. In each query four integers x1, y1, x2, y2 
+is given, you have to find the sum of submatrix with (x1,y1) be the leftmost 
+corner and (x2,y2) be the rightmost corner %10^9+7.
 
 
 Input Format
 
-The first line contains three space-separated integers N, M, Q where 1<=N, M<=10^3, 1<=Q<=10^6.
+The first line contains three space-separated integers N, M, Q where 1<=N, M<=10^3, 
+1<=Q<=10^6.
 
 Next N lines contains M space-separated integers (-1e9<=Aij<=1e9).
 
-Next Q lines contains four space separated integers x1, y1, x2, y2 where 1<=x1<=x2<=N, 1<=y1<=y2<=M.
-
+Next Q lines contains four space separated integers x1, y1, x2, y2 where 1<=x1<=x2<=N, 
+1<=y1<=y2<=M.
 
 Output Format
 
-For each query print, the sum of submatrix with (x1,y1) be the leftmost corner and (x2,y2) be the rightmost
- corner in a new line %10^9+7.
+For each query print, the sum of submatrix with (x1,y1) be the leftmost corner and (x2,y2) 
+be the rightmost corner in a new line %10^9+7.
 
 
 Sample Input 1
@@ -1749,15 +1798,15 @@ Check the video solution - 2D Prefix Sums Concept.
 We solve this problem using the concept of prefix sums.
 
 To do this efficiently using prefix sums, we need to first precompute a 2d-array called prefix sums, 
-where each cell (i,j) stores the sum of all the values in the submatrix with (1,1) as the top-left corner and
- (i,j) as the bottom-right corner. We can compute this array using the following formula:
+where each cell (i,j) stores the sum of all the values in the submatrix with (1,1) as the top-left 
+corner and (i,j) as the bottom-right corner. We can compute this array using the following formula:
 
 partialsums[i][j] = partialsums[i-1][j] + partialsums[i][j-1] - partialsums[i-1][j-1] + values[i][j]
 
 Here, values[i][j] is the value of the cell at (i,j) in the original 2d-array.
 
-Now to find the answer to each of the queries, where we are given the top left corner (x1,y1) and bottom
- right corner (x2,y2). We can find the sum of that rectangle by doing
+Now to find the answer to each of the queries, where we are given the top left corner (x1,y1) 
+and bottom right corner (x2,y2). We can find the sum of that rectangle by doing
 
 ans=partialsums[x2][y2]-partialsums[x1][y2]-partialsums[x2][y1]+partialsums[x1][y1]
 
@@ -1804,12 +1853,13 @@ Difficulty :
 Relevant For:
 Description
 
-Given a 2d-array of dimension N*M and Q queries. In each query five integers x1, y1, x2, y2, C is given,
- you have to increase the value of each cell in the submatrix with (x1,y1) be the leftmost corner and 
- (x2,y2) be the rightmost corner by C. Initially the value of all the cell of the 2d-array is 0.
+Given a 2d-array of dimension N*M and Q queries. In each query five integers x1, y1, x2, y2, C 
+is given,you have to increase the value of each cell in the submatrix with (x1,y1) be the 
+leftmost corner and (x2,y2) be the rightmost corner by C. Initially the value of all the 
+cell of the 2d-array is 0.
 
-After all the query is performed, print the maximum value present in the 2d-array and the number of
- the cell with the maximum value.
+After all the query is performed, print the maximum value present in the 2d-array and the 
+number of the cell with the maximum value.
 
 
 Input Format
@@ -1852,48 +1902,55 @@ corner and (x2,y2) as the bottom right corner.
  to the top left corner at (x1,y1). What will be its effect on the matrix? We can see that 
  due to this addition all the elements in the rectangle (x1,y1) as the left corner and (n,m)
   as the right bottom corner would have the effect of 
-+C.But we surely don't want this because our aim is only to add C in the smaller rectangle with (x1,y1) 
-and (x2,y2) as corners. How to counter this problem? Well we do a −C
- at the top right and bottom left corners which are (x1,y2) and (x2,y1). Is that all? Does it take
-  care of everything. What about the region which is to the right and bottom of (x2,y2). Isn't it 
- getting the effect of all the above additions and subtractions? So it will have one +C and two −C
- contributions. Well we can easily solve this issue by just adjusting this with a +C
- at the index (x2,y2).
++C.But we surely don't want this because our aim is only to add C in the smaller rectangle 
+with (x1,y1) and (x2,y2) as corners. How to counter this problem? Well we do a −C
+ at the top right and bottom left corners which are (x1,y2) and (x2,y1). 
+ Is that all? Does it take care of everything. What about the region which is to the right
+  and bottom of (x2,y2). Isn't it getting the effect of all the above additions and 
+  subtractions? So it will have one +C and two −C contributions. Well we can easily 
+  solve this issue by just adjusting this with a +C at the index (x2,y2).
 
 
 We solve this problem using the concept of partial sums.
 
 First, create a 2d-array of size N*M to store the initial values of all cells as 0.
 
-Next, for each query (x1, y1, x2, y2, C), we need to add C to each cell in the submatrix with (x1,y1)
+Next, for each query (x1, y1, x2, y2, C), we need to add C to each cell in 
+the submatrix with (x1,y1)
  be the leftmost corner and (x2,y2) be the rightmost corner.
 
-To do this efficiently using partial sums, we need to first precompute a 2d-array called partial sums, 
-where each cell (i,j) stores the sum of all the values in the submatrix with (1,1) as the top-left corner
- and (i,j) as the bottom-right corner. We can compute this array using the following formula:
-
-partialsums[i][j] = partialsums[i-1][j] + partialsums[i][j-1] - partialsums[i-1][j-1] + values[i][j]
+To do this efficiently using partial sums, we need to first precompute a 
+2d-array called partial sums, 
+where each cell (i,j) stores the sum of all the values in the submatrix with 
+(1,1) as the top-left corner
+ and (i,j) as the bottom-right corner. We can compute this array
+  using the following formula:partialsums[i][j] = 
+  partialsums[i-1][j] + partialsums[i][j-1] - partialsums[i-1][j-1] + values[i][j]
 
 Here, values[i][j] is the value of the cell at (i,j) in the original 2d-array.
 
-Once we have computed the partial sums array, we can update the values in the submatrix with (x1,y1)
- as the top-left corner and (x2,y2) as the bottom-right corner by adding C to each cell using the following formula:
+Once we have computed the partial sums array, we can update the values in the submatrix 
+with (x1,y1) as the top-left corner and (x2,y2) as the bottom-right corner by adding C 
+to each cell using the following formula:
 
 partialsums[x2][y2] += C
 partialsums[x1-1][y2] -= C
 partialsums[x2][y1-1] -= C
 partialsums[x1-1][y1-1] += C
 
-After all the queries have been processed, we can compute the final values in the original 2d-array by
- subtracting the partial sums for the overlapping submatrices using the following formula:
+After all the queries have been processed, we can compute the final values in the 
+original 2d-array by subtracting the partial sums for the overlapping submatrices 
+using the following formula:
+values[i][j] = 
+partialsums[i][j] - partialsums[i-1][j] - partialsums[i][j-1] + partialsums[i-1][j-1]
 
-values[i][j] = partialsums[i][j] - partialsums[i-1][j] - partialsums[i][j-1] + partialsums[i-1][j-1]
-
-This will give us the final values in the original 2d-array after all the queries have been processed.
+This will give us the final values in the original 2d-array after all the queries 
+have been processed.
 After this just iterate over the entire matrix to find the maximum element.
 The time complexity for this algorithm is O(Q+N×M)
-. For each query it almost takes constant time. Finally we iterate over the entire 2D matrix to find the prefix
- sum of the partial sum matrix and keep updating the maximum value and its position.
+. For each query it almost takes constant time. Finally we iterate over the entire
+ 2D matrix to find the prefix sum of the partial sum matrix and keep updating the maximum
+  value and its position.
 
 
 */
@@ -1953,7 +2010,8 @@ Difficulty :
 Relevant For:201,202,301
 Description
 
-Given an array of N integers and Q queries and an integer K. Initially, all the elements of the array have value 0.
+Given an array of N integers and Q queries and an integer K. Initially,
+ all the elements of the array have value 0.
 
 In each query 3 integers A, L, R is given, which means perform GP addition
 
@@ -1982,9 +2040,11 @@ After performing all the operations. Print the final array % 10^9+7.
 
 Input Format
 
-The first line contains three space-separated integers N, Q, K where 1<=N<=10^6, 1<=Q<=10^6, 1<=K<=10^9.
+The first line contains three space-separated integers N, Q, K 
+where 1<=N<=10^6, 1<=Q<=10^6, 1<=K<=10^9.
 
-Next Q lines contain three space-separated integers A, L, R where 0<=A<=10^4, 1<=L<=R<=N.
+Next Q lines contain three space-separated integers A, L, 
+R where 0<=A<=10^4, 1<=L<=R<=N.
 
 
 Output Format
@@ -2087,7 +2147,8 @@ O(1) time. Inside the while loop, we call the add and sub functions which take
 O(1)time each. Therefore, the time complexity of processing all the queries is O(Q)
 .
 After processing all the queries, the for loop iterates 
-N times and performs constant-time operations inside the loop. Therefore, the time complexity of the for loop is also O(N).
+N times and performs constant-time operations inside the loop. Therefore, 
+the time complexity of the for loop is also O(N).
 So the overall time complexity of the main function is O(Q+N)
 .*/
 
@@ -2100,8 +2161,8 @@ Difficulty : ***
 Relevant For:201,203,301
 Description
 
-Given an array of N integers and Q queries. Initially, all the elements of the array have value 0.
-
+Given an array of N integers and Q queries. Initially, all the elements of the array 
+have value 0.
 In each query 4 integers A, D, L, R is given, which means perform AP addition
 
 Arr[L]+=A
@@ -2227,12 +2288,14 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an array A of N integers. Find the number of pairs (i, j) such that i < j and Ai + Aj is a power of 2.
+You are given an array A of N integers. Find the number of pairs (i, j) such that 
+i < j and Ai + Aj is a power of 2.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases.
+ Then T test cases follow.
 
 The first line of each test case contains one integer N - the length of the array. 
 
@@ -2241,7 +2304,8 @@ The second line of each test case contains N space-separated integers.
 
 Output Format
 
-For each test case, print the number of pairs (i, j) such that i < j and Ai + Aj is a power of 2.
+For each test case, print the number of pairs (i, j) such that i < j and Ai + Aj is a 
+power of 2.
 
 
 Constraints
@@ -2273,18 +2337,22 @@ Sample Output 1
 
 Note
 
-For the first test case, possible pairs having powers of two as sum are: [1, 7], [1, 3], [1, 1], [7, 1], [3, 1]
+For the first test case, possible pairs having powers of two as sum are: 
+[1, 7], [1, 3], [1, 1], [7, 1], [3, 1]
 
-For the second test case, possible pairs having powers of two as sum are: [1, 1], [1, 1], [1, 1]
+For the second test case, possible pairs having powers of two as sum are: 
+[1, 1], [1, 1], [1, 1]
 
-For the third test case, possible pairs having powers of two as sum are: [2, 6], [2, 14]*/
+For the third test case, possible pairs having powers of two as sum are:
+ [2, 6], [2, 14]*/
 
 
 
 /*Store all the integers in a map.
 
 
-Iterate through all powers of 2 possible as sum and store the integers in a map. As you iterate through the array,
+Iterate through all powers of 2 possible as sum and store the integers in a map.
+ As you iterate through the array,
  check for every possible power of 2, the number of pairs possible.
 
 Time Complexity per test case: O(N log N)*/
@@ -2331,7 +2399,8 @@ Difficulty : ****
 Relevant For:
 Description
 
-Given a 2d-array of dimension N*M and Q queries. In each query three integers x1, y1, L are given, 
+Given a 2d-array of dimension N*M and Q queries. In each query 
+three integers x1,y1, L are given, 
 you have to find the sum of the triangle ( check the image ) %10^9+7.
 
 Assume that the value of cell outside the grid has value 0.
@@ -2340,11 +2409,13 @@ https://lh5.googleusercontent.com/ytCYRQPvCdVeJJOQ07S47tiA1hxnWyXUHLzyb7z8or3xuU
 
 Input Format
 
-The first line contains three space-separated integers N, M, Q where 1<=N, M<=10^3, 1<=Q<=10^6.
+The first line contains three space-separated integers 
+N, M, Q where 1<=N, M<=10^3, 1<=Q<=10^6.
 
 Next N lines contains M space-separated integers (-1e9<=Aij<=1e9).
 
-Next Q lines contains three space separated integers x1, y1, L where 1<=x1<=N, 1<=y1<=M, 1<=L<=1000.
+Next Q lines contains three space separated integers 
+x1, y1, L where 1<=x1<=N, 1<=y1<=M, 1<=L<=1000.
 
 
 Output Format
@@ -2377,47 +2448,61 @@ Sample Output 1
 
 
 /*approach*/
-/*We need to find the sum of all the values in the triangular region. We already know how to do that 
-if the shape was of rectangles. So lets try to break this problem too into smaller rectangles and triangles.
+/*We need to find the sum of all the values in the triangular region.
+ We already know how to do that 
+if the shape was of rectangles. 
+So lets try to break this problem too into smaller rectangles and triangles.
 
 
-In this approach, we are calculating the triangular summation using prefix sum techniques. Specifically, 
-we are first calculating the rectangular prefix sum rect, which is the cumulative sum of the elements of 
-the 2D array arr up to that point. Then, we are using the rectangular prefix sum to calculate the triangular 
-prefix sum tri, which is the cumulative sum of the elements of the 2D array arr within the lower left triangle.
+In this approach, we are calculating the triangular summation using
+ prefix sum techniques. Specifically, 
+we are first calculating the rectangular prefix sum rect, which is
+ the cumulative sum of the elements of 
+the 2D array arr up to that point. Then, we are using the rectangular 
+prefix sum to calculate the triangular 
+prefix sum tri, which is the cumulative sum of the elements of the 2D 
+array arr within the lower left triangle.
 
-To calculate the triangular prefix sum tri, we start by initializing tri[0][0] = arr[0][0]. Then, for each 
+To calculate the triangular prefix sum tri, we start by initializing
+ tri[0][0] = arr[0][0]. Then, for each 
 subsequent row i and column j, we calculate tri[i][j] as follows
 
 tri[i][j]=rect[i][j]−rect[i][j−1]+tri[i−1][j−1]Here, rect[i][j]−rect[i][j−1]
 
- gives us the sum of the elements in the rectangular submatrix from (0, j-1) to (i, j), and 
- tri[i−1][j−1]
- gives us the sum of the elements in the lower left triangle of the submatrix from (0, 0) to (i-1, j-1).
-  We add these two sums to get the sum of the elements in the lower left triangle of the 
+ gives us the sum of the elements in the rectangular submatrix from 
+ (0, j-1) to (i, j), and tri[i−1][j−1]
+ gives us the sum of the elements in the lower left triangle of the submatrix
+  from (0, 0) to (i-1, j-1).
+  We add these two sums to get the sum of the elements in the lower left 
+  triangle of the 
   submatrix from (0, 0) to (i, j).
 
-Once we have calculated the triangular prefix sum tri, we can answer each query in constant time. For
- a query with parameters x1, y1, and L, we first find the indices i and j of the top left corner of the
-  submatrix with lower left triangle of interest:
+Once we have calculated the triangular prefix sum tri, we can answer each 
+query in constant time. For
+ a query with parameters x1, y1, and L, we first find the indices i and j 
+ of the top left corner of thesubmatrix with lower left triangle of interest:
 
 i=max(1,x1−L)
 j=max(1,y1−L)
-Then, we can compute the sum of the elements within the lower left triangle of the submatrix from 
+Then, we can compute the sum of the elements within the lower left triangle 
+of the submatrix from 
 (x1, y1) to (x1 - L , y1 - L ) as follows:
 
 ans=tri[x1][y1]−tri[i][j]−(rect[i][y1]−rect[i][y1−L]−rect[x1−L][j]+rect[i][j]).
 
 Here, tri[x1][y1] gives us the sum of the elements in the lower left triangle of the
- submatrix from (0, 0) to (x1, y1), tri[i][j] gives us the sum of the elements in the lower 
+ submatrix from (0, 0) to (x1, y1), tri[i][j] gives us the sum of the 
+ elements in the lower left triangle of the
+  submatrix from (0, 0) to (i, j), rect[i][y1] - rect[i][y1 - L] gives us 
  
- left triangle of the submatrix from (0, 0) to (i, j), rect[i][y1] - rect[i][y1 - L] gives us 
- 
- the sum of the elements in the rectangular submatrix from (i+1, y1-L+1) to (i, y1), and rect[x1 - L][j]
-  gives us the sum of the elements in the rectangular submatrix from (x1-L+1, j+1) to (x1, j). 
-  We subtract the latter two sums to remove the double-counted elements in the rectangular submatrix. 
+ the sum of the elements in the rectangular submatrix from (i+1, y1-L+1) 
+ to (i, y1), and rect[x1 - L][j]
+  gives us the sum of the elements in the rectangular submatrix from
+   (x1-L+1, j+1) to (x1, j). We subtract the latter two sums to remove the 
+  double-counted elements in the rectangular submatrix. 
   
-  Finally, we subtract tri[i][j] from tri[x1][y1] to remove the elements in the lower left triangle 
+  Finally, we subtract tri[i][j] from tri[x1][y1] to remove the 
+  elements in the lower left triangle 
   of the submatrix from (1, 1) to (i, j), which were subtracted twice.
 
 
@@ -2503,12 +2588,14 @@ Difficulty : ***
 Relevant For:
 Description
 
-Given an array of N integers and Q queries. In each query two integers L, R is given, you have to find (A[L] + A[L+1]*2 + A[L+2]*3 + A[L+3]*4...A[R]*(R-L+1)) % 10^9+7.
+Given an array of N integers and Q queries. In each query two integers L, R is given,
+ you have to find (A[L] + A[L+1]*2 + A[L+2]*3 + A[L+3]*4...A[R]*(R-L+1)) % 10^9+7.
 
 
 Input Format
 
-The first line contains two space-separated integers N, Q where 1<=N<=10^6, 1<=Q<=10^6.
+The first line contains two space-separated integers N, Q where 1<=N<=10^6, 
+1<=Q<=10^6.
 
 Next line contains N space-separated integers (-1e9<=Ai<=1e9).
 
@@ -2516,8 +2603,8 @@ Next Q lines contain two space-separated integers L, R where 1<=L<=R<=N.
 
 
 Output Format
-
-For each query print the value of (A[L] + A[L+1]*2 + A[L+2]*3 + A[L+3]*4...A[R]*(R-L+1)) % 10^9+7 in a new line.
+For each query print the value of (A[L] + A[L+1]*2 + A[L+2]*3 + A[L+3]*4..
+.A[R]*(R-L+1)) % 10^9+7 in a new line.
 
 
 Sample Input 1
@@ -2557,12 +2644,16 @@ Difficulty : ***
 Relevant For:201,202,301
 Description
 
-Given an array of N integers, Q queries, and an integer K. In each query two integers L, R is given, you have to find (A[L] + A[L+1] * K + A[L+2] * K^2 + …. A[R] * K^(R-L))% 10^9+7.
+Given an array of N integers, Q queries, and an integer K. 
+In each query two integers L,
+ R is given, you have to find
+  (A[L] + A[L+1] * K + A[L+2] * K^2 + …. A[R] * K^(R-L))% 10^9+7.
 
 
 Input Format
 
-The first line contains three space-separated integers N, Q, K where 1<=N<=10^6, 1<=Q<=10^6, 1<=K<=10^9.
+The first line contains three space-separated integers 
+N, Q, K where 1<=N<=10^6, 1<=Q<=10^6, 1<=K<=10^9.
 
 Next line contains N space-separated integers (-1e9<=Ai<=1e9).
 
@@ -2571,7 +2662,8 @@ Next Q lines contain two space-separated integers L, R where 1<=L<=R<=N.
 
 Output Format
 
-For each query print the value of (A[L] + A[L+1] * K + A[L+2] * K^2 + …. A[R] * K^(R-L))% 10^9+7 in a new line.
+For each query print the value of 
+(A[L] + A[L+1] * K + A[L+2] * K^2 + …. A[R] * K^(R-L))% 10^9+7 in a new line.
 
 
 Sample Input 1

@@ -5,13 +5,16 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-Using characters: . (dot) and * (asterisk) print a grid-like pattern as shown in the sample test case.
+Using characters: . (dot) and * (asterisk) print a grid-like pattern
+ as shown in the sample test case.
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number 
+of test cases. Then T test cases follow.
 
-The first line of each test case contains two space-separated integers N, M.
+The first line of each test case contains two 
+space-separated integers N, M.
 
 
 Output Format
@@ -24,7 +27,8 @@ Constraints
 
 1≤ N, M ≤ 1000
 
-It is guaranteed that the sum of N*M for all test cases does not exceed 106.
+It is guaranteed that the sum of N*M for all test
+ cases does not exceed 106.
 
 Sample Input 1
 
@@ -94,16 +98,20 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an array of N integers. The frequency of exactly one integer is odd. Find that integer.
+You are given an array of N integers. The frequency of exactly 
+one integer is odd. Find that integer.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the 
+number of test cases. Then T test cases follow.
 
-The first line of each test case contains one integer N - the length of the array. 
+The first line of each test case contains one integer N - 
+the length of the array. 
 
-The second line of each test case contains N space-separated integers.
+The second line of each test case contains N 
+space-separated integers.
 
 Output Format
 
@@ -117,7 +125,8 @@ Constraints
 
 -109≤ Ai ≤ 109
 
-It is guaranteed that the sum of N over all test cases does not exceed 106
+It is guaranteed that the sum of N over all test
+ cases does not exceed 106
 
 Sample Input 1
 
@@ -164,15 +173,18 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an integer N and a decimal number M. M can be represented as Y.Z where .
+You are given an integer N and a decimal number M. 
+M can be represented as Y.Z where .
  is the decimal point and N as X. You have to find (Z+X).(Y+X)
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - 
+the number of test cases. Then T test cases follow.
 
-The first line of each test case contains one integer N and a decimal number M.
+The first line of each test case contains one integer
+ N and a decimal number M.
 
 
 Output Format
@@ -202,11 +214,14 @@ Sample Output 1
 
 Note
 
-For the first test case, X = 14, Y = 1, Z = 2. So ans = (2+14).(1+14) = 16.15
+For the first test case, X = 14, Y = 1, Z = 2. So ans = 
+(2+14).(1+14) = 16.15
 
-For the second test case, X = 3, Y = 4, Z = 5. So ans = (5+3).(4+3) = 8.7
+For the second test case, X = 3, Y = 4, Z = 5. So ans =
+ (5+3).(4+3) = 8.7
 
-For the third test case, X = 31, Y = 0, Z = 143. So ans = (143+31).(0+31) = 174.31*/
+For the third test case, X = 31, Y = 0, Z = 143. So ans =
+ (143+31).(0+31) = 174.31*/
     
     void solve()
 {
@@ -236,12 +251,14 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an integer N with no more than 10^5 digits. You have to find the sum of its digits.
+You are given an integer N with no more than 10^5 digits.
+ You have to find the sum of its digits.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - 
+the number of test cases. Then T test cases follow.
 
 The first line of each test case contains one integer N.
 
@@ -257,7 +274,8 @@ Constraints
 
 1≤ Number of digits in N ≤ 106
 
-It is guaranteed that the sum of the number of digits in N over all the test cases does not exceed 106.
+It is guaranteed that the sum of the number of digits in N over
+ all the test cases does not exceed 106.
 
 
 Sample Input 1
@@ -306,13 +324,16 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an array A. One random element is removed from A to form array B and one random element is 
-removed from B to form array C. You have to find the missing element in B and the missing element in C.
+You are given an array A. One random element is removed from
+ A to form array B and one random element is 
+removed from B to form array C. You have to find the missing 
+element in B and the missing element in C.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases.
+ Then T test cases follow.
 
 The first line of each test case contains one integer N - the length of the array. 
 
@@ -448,22 +469,33 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given the marks of a student in mid-term, final-term and the make-up examinations. If the student does not 
-attend an exam, marks are assigned as -1. You have to find the grade of the student according to the following guidelines:
+You are given the marks of a student in mid-term, final-term and
+ the make-up examinations. If the student does not 
+attend an exam, marks are assigned as -1. You have to find the 
+grade of the student according to the following guidelines:
 
-If the student does not take the mid-term or the final-term exam, grade is F
-If the total score in mid-term and final-term is greater than or equal to 80, grade is A.
-If the total score in mid-term and final-term is greater than or equal to 65 and less than 80, grade is B.
-If the total score in mid-term and final-term is greater than or equal to 50 and less than 65, grade is C.
-If the total score in mid-term and final-term is greater than or equal to 30 and less than 50, grade is D. However, if the
- score of the make-up examination is greater than or equal to 50, the grade will be C.
-If the total score in mid-term and final-term is less than 30, grade is F.
+If the student does not take the mid-term or the final-term exam,
+ grade is F
+If the total score in mid-term and final-term is greater than or 
+equal to 80, grade is A.
+If the total score in mid-term and final-term is greater than or
+ equal to 65 and less than 80, grade is B.
+If the total score in mid-term and final-term is greater than or
+ equal to 50 and less than 65, grade is C.
+If the total score in mid-term and final-term is greater than or 
+equal to 30 and less than 50, grade is D. However, if the
+ score of the make-up examination is greater than or equal to 50,
+  the grade will be C.
+If the total score in mid-term and final-term is less than 30, 
+grade is F.
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number 
+of test cases. Then T test cases follow.
 
-The first line of each test case contains three space-separated integers M, F, R - the marks of the student in the mid-term, 
+The first line of each test case contains three space-separated 
+integers M, F, R - the marks of the student in the mid-term, 
 final-term and the make-up examinations.
 
 
@@ -527,15 +559,18 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-Using characters: . (dot), * (asterisk), / (slash) and \ (backslash) print a grid-like pattern
+Using characters: . (dot), * (asterisk), / (slash) and \ 
+(backslash) print a grid-like pattern
  as shown in the sample test case.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number 
+of test cases. Then T test cases follow.
 
-The first line of each test case contains three space-separated integers N, M, P. - P denotes the 
+The first line of each test case contains three space-separated 
+integers N, M, P. - P denotes the 
 size of .(dot) and /,\(slash) block.
 
 
@@ -552,7 +587,8 @@ Constraints
 
 1≤ P ≤ 100
 
-It is guaranteed that the sum of NMP*P for all test cases does not exceed106.
+It is guaranteed that the sum of NMP*P for all test cases does
+ not exceed106.
 
 
 Sample Input 1
@@ -622,8 +658,10 @@ Sample Output 2
 
 Note
 
-The diagonal of the first square of the grid is directed towards the down-right corner, use the \ (backslash)
- character to print it, while the next diagonal will be directed towards the upper-right corner, use the / (slash) character to print it.*/
+The diagonal of the first square of the grid is directed towards 
+the down-right corner, use the \ (backslash)
+ character to print it, while the next diagonal will be directed 
+ towards the upper-right corner, use the / (slash) character to print it.*/
 
 void solve(){
     int n, m, p;
@@ -648,22 +686,26 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an array of N integers. In one operation, you can increase the value of any element by one.
+You are given an array of N integers. In one operation, you can
+ increase the value of any element by one.
  Find the minimum number of operations to make the array non-decreasing.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number
+ of test cases. Then T test cases follow.
 
-The first line of each test case contains one integer N - the length of the array. 
+The first line of each test case contains one integer N -
+ the length of the array. 
 
 The second line of each test case contains N space-separated integers.
 
 
 Output Format
 
-For each test case, print the minimum number of operations to make the array Non-Decreasing.
+For each test case, print the minimum number of operations to
+ make the array Non-Decreasing.
 
 
 Constraints
@@ -760,8 +802,10 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given a dice with different values on each face. Find the integer at the top of the face after the sequence 
-of commands to roll the dice is performed. The dice is initially located as shown.
+You are given a dice with different values on each face. 
+Find the integer at the top of the face after the sequence 
+of commands to roll the dice is performed. 
+The dice is initially located as shown.
 
 
  
@@ -770,16 +814,20 @@ of commands to roll the dice is performed. The dice is initially located as show
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - 
+the number of test cases. Then T test cases follow.
 
-The first line of each test case contains six space-separated integers Ai - values on each face.
+The first line of each test case contains six
+ space-separated integers Ai - values on each face.
 
-The second line of each test case contains a string S - the sequence of commands.
+The second line of each test case contains a string S - 
+the sequence of commands.
 
 
 Output Format
 
-For each test case, print the integer at the top of the face after the sequence of commands to roll the dice is done.
+For each test case, print the integer at the top of the 
+face after the sequence of commands to roll the dice is done.
 
 
 Constraints
@@ -790,7 +838,8 @@ Constraints
 
 1≤ |S| ≤ 106
 
-It is guaranteed that the sum of |S| over all test cases does not exceed 106.
+It is guaranteed that the sum of |S| over all test
+ cases does not exceed 106.
 
 
 Sample Input 1
@@ -811,11 +860,15 @@ Sample Output 1
 
 Note
 
-For the first test case, initially 1 is at top, rotating N, 2 is at top, rotating E, 4 is at top.
+For the first test case, initially 1 is at top,
+ rotating N, 2 is at top, rotating E, 4 is at top.
 
-For the second test case, initially 2 is at top, rotating S, 1 is at top, rotating W, 5 is at top, rotating N, 2 is at top.
+For the second test case, initially 2 is at top, 
+rotating S, 1 is at top, rotating W, 5 is at top,
+ rotating N, 2 is at top.
 
-For the third test case, initially 3 is at top, rotating S, 7 is at top, rotating S, 8 is at top,
+For the third test case, initially 3 is at top, 
+rotating S, 7 is at top, rotating S, 8 is at top,
  rotating E, 6 is at top, rotating N, 
 7 is at top.*/
 
@@ -880,22 +933,28 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an integer N. You have to tell whether the number is a perfect square/cube according to the given query. 
-Do not use inbuilt sqrt() and cube() function. As sqrt(4) can be equal to 1.9999999 and int(1.999999). = 1. Due to precision
+You are given an integer N. You have to tell whether the number is
+ a perfect square/cube according to the given query. 
+Do not use inbuilt sqrt() and cube() function. As sqrt(4) can
+ be equal to 1.9999999 and int(1.999999). = 1. Due to precision
  issue do not use sqrt() if you are dealing with integers.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of 
+test cases. Then T test cases follow.
 
-The first line of each test case contains two space-separated integers Q, N - Q=1 denotes that you have to check if N is
- a perfect square and Q=2 denotes that you have to check if N is a perfect cube.
+The first line of each test case contains two space-separated 
+integers Q, N - Q=1 denotes that you have to check if N is
+ a perfect square and Q=2 denotes that you have to check if
+  N is a perfect cube.
 
 
 Output Format
 
-For each test case, print “YES” if the number is a perfect square/cube and “NO” if the number is not a perfect square/cube,
+For each test case, print “YES” if the number is a perfect 
+square/cube and “NO” if the number is not a perfect square/cube,
  according to the given query.
 
 
@@ -989,14 +1048,17 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given matrix A of size N*M and matrix B of size M*P. You have to find the matrix multiplication of A and B.
+You are given matrix A of size N*M and matrix B of size M*P. 
+You have to find the matrix multiplication of A and B.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - 
+the number of test cases. Then T test cases follow.
 
-The first line of each test case contains three space-separated integers, N, M and P.
+The first line of each test case contains three 
+space-separated integers, N, M and P.
 
 Each of the next N lines contain M space-separated integers - matrix A.
 
@@ -1104,21 +1166,27 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given two rectangles with their lower-left and upper-right coordinates. You have to find the area of the intersection and union of the rectangles. Both rectangles are axis-aligned.
+You are given two rectangles with their lower-left and upper-right coordinates.
+ You have to find the area of the intersection and union of the rectangles.
+  Both rectangles are axis-aligned.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number
+ of test cases. Then T test cases follow.
 
-The first line of each test case contains four space-separated integers X1, Y1, X2, Y2 - coordinates of the first rectangle. 
+The first line of each test case contains four space-separated
+ integers X1, Y1, X2, Y2 - coordinates of the first rectangle. 
 
-The second line of each test case contains four space-separated integers X3, Y3, X4, Y4 - coordinates of the second rectangle. 
+The second line of each test case contains four space-separated 
+integers X3, Y3, X4, Y4 - coordinates of the second rectangle. 
 
 
 Output Format
 
-For each test case, print the area of intersection and union of the rectangles.
+For each test case, print the area of intersection and 
+union of the rectangles.
 
 
 Constraints
@@ -1146,7 +1214,8 @@ Sample Output 1
 
 Note
 
-If the image is not visible please check this docs link - https://docs.google.com/document/d/126mU5E-f2FhaByhQ8xE3jeI7JrpCOwyT2Pnp1pAvAu0/
+If the image is not visible please check this docs link - 
+https://docs.google.com/document/d/126mU5E-f2FhaByhQ8xE3jeI7JrpCOwyT2Pnp1pAvAu0/
 
 For the first test case,
 
@@ -1194,20 +1263,24 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given two points on a 2-D plane. You have to find the euclidean and manhattan 
+You are given two points on a 2-D plane. You have 
+to find the euclidean and manhattan 
 distance between the two points.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T -
+ the number of test cases. Then T test cases follow.
 
-The first line of each test case contains four space-separated integers X1, Y1, X2, Y2.
+The first line of each test case contains four 
+space-separated integers X1, Y1, X2, Y2.
 
 
 Output Format
 
-For each test case, print the euclidean and manhattan distance between the two points on a new line. 
+For each test case, print the euclidean and manhattan
+ distance between the two points on a new line. 
 The answer should contain 7 decimal places after round-off.
 
 
@@ -1233,10 +1306,14 @@ Sample Output 1
 
 Note
 
-This problem is for educational purpose, use double instead of long double to store the intermediate values.
- In the case of a problem where you are being asked to round-off and match the exact numbers till some places after 
- the decimal, you will have to match the data-type used by the setter. generally, these sort of test cases is generated 
- by using some fixed datatype and incase in a test you are unable to get an AC, make sure to try double and floats too.*/
+This problem is for educational purpose, use double instead 
+of long double to store the intermediate values.
+ In the case of a problem where you are being asked to round-off and
+  match the exact numbers till some places after 
+ the decimal, you will have to match the data-type used by the setter.
+  generally, these sort of test cases is generated 
+ by using some fixed datatype and incase in a test you are unable to
+  get an AC, make sure to try double and floats too.*/
 
 
 void solve(){
@@ -1263,15 +1340,19 @@ Difficulty : *
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given an array A of N integers. You have to choose a contiguous arithmetic subarray with equal
- difference between consecutive integers, that has the maximum length. Find the maximum possible length.
+You are given an array A of N integers. You have to choose a 
+contiguous arithmetic subarray with equal
+ difference between consecutive integers, that has the maximum length.
+  Find the maximum possible length.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases.
+ Then T test cases follow.
 
-The first line of each test case contains one integer N - the length of the array.
+The first line of each test case contains one integer N -
+ the length of the array.
 
 The second line of each test case contains N space-separated integers.
 
@@ -1396,14 +1477,17 @@ Difficulty : **
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You are given two arrays, A and B of N integers. You have to create a new array, Ci = Ai * D + Bi
+You are given two arrays, A and B of N integers. You have to create
+ a new array, Ci = Ai * D + Bi
 
-Find the maximum number of zeros you can get in the new array Ci taking an optimal value of D. (D is a real number)
+Find the maximum number of zeros you can get in the new array Ci 
+taking an optimal value of D. (D is a real number)
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases.
+ Then T test cases follow.
 
 The first line of each test case contains one integer N - the length of the array. 
 
@@ -1414,7 +1498,8 @@ The third line of each test case contains N space-separated integers - array Bi
 
 Output Format
 
-For each test case, print the maximum number of zeros you can get in the new array Ci taking an optimal value of D.
+For each test case, print the maximum number of zeros you can get in the new 
+array Ci taking an optimal value of D.
 
 
 Constraints
@@ -1509,15 +1594,18 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-There are N candies in a shop. Find the maximum number of candies you can buy with the B money you have, 
+There are N candies in a shop. Find the maximum number of candies you 
+can buy with the B money you have, 
 given the price of each candy.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases. 
+Then T test cases follow.
 
-The first line of each test case contains two space-separated integers N and B - the length of the array 
+The first line of each test case contains two space-separated 
+integers N and B - the length of the array 
 and money you have.
 
 The second line of each test case contains N space-separated integers.
@@ -1626,17 +1714,21 @@ Difficulty :
  Memory: 256 MB Accepted Submissions: 100
 Description
 
-You have a robot which can move up, down, left and right. You placed it at (X, Y) in a grid with R rows and C columns.
- The robot is given N instructions of the form N(up), S(down), E(right) and W(left). The robot will continue moving the 
- same direction until it reaches a square that it has not been in before. Find the coordinates of the square the robot will
-  reach after the instructions are performed. The robot will not go out of the grid, according to the instructions.
+You have a robot which can move up, down, left and right. You placed it at (X, Y) 
+in a grid with R rows and C columns.The robot is given N instructions of the form 
+N(up), S(down), E(right) and W(left). The robot will continue moving the 
+ same direction until it reaches a square that it has not been in before. 
+ Find the coordinates of the square the robot will reach after the instructions are performed. 
+The robot will not go out of the grid, according to the instructions.
 
 
 Input Format
 
-The first line of the input contains one integer T - the number of test cases. Then T test cases follow.
+The first line of the input contains one integer T - the number of test cases.
+ Then T test cases follow.
 
-The first line of each test case contains five space-separated integers N, R, C, X, Y - the length of the instructions,
+The first line of each test case contains five space-separated integers N, R, C, X, Y - 
+the length of the instructions,
  size of grid and the coordinates of initial position.
 
 The second line of each test case contains a string S - the instructions .
@@ -1644,7 +1736,8 @@ The second line of each test case contains a string S - the instructions .
 
 Output Format
 
-For each test case, print the coordinates of the square the robot will reach after the instructions are performed.
+For each test case, print the coordinates of the square the robot will reach after 
+the instructions are performed.
 
 
 Constraints

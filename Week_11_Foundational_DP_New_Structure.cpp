@@ -3186,3 +3186,84 @@ O(9NK)*/
 Max Score: 100
 3. Jenga Tower
 Max Score: 100 */
+
+
+//additon some exta questions....
+
+
+
+// calculate size of lis ...using form 2 ...timecomplexity=o(n^2);
+int n;
+int arr[1001];
+int dp[1001];
+
+int rec(int level){  // best lis() ending at level from [1--------level]
+    
+    // pruning
+    if(level<0) return 0;
+    //base case 
+    //cached check
+    
+    
+    if(dp[level]!=-1)return dp[level];
+    
+    //transisition
+    
+    int ans=1;
+    for(int prev_taken=0;prev_taken<level;prev_taken++){
+        
+        if(arr[prev_taken]<arr[level]){
+            
+            ans=max(ans,1+rec(prev_taken));
+        }
+        
+        
+    }
+    //save and return 
+    
+    //return ans;
+    return dp[level]=ans;
+    
+    
+    
+    
+}
+
+
+void solve(){
+    
+    
+    cin>>n;
+    for(int i=0;i<n;i++){
+        
+        cin>>arr[i];
+        
+    }
+    
+    memset(dp,-1,sizeof(dp));
+    
+    int best=1;
+    for(int i=0;i<n;i++){
+        
+        best=max(best,rec(i));
+        
+    }
+    
+    cout<<best<<nl;
+    
+}
+
+signed main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
+    
+    // int _t; cin>>_t;while(_t--)
+        solve();
+    
+    
+    //cerr<<"Time elapsed: "<< 1.0*clock()/ CLOCKS_PER_SEC << "s.\n\n";
+    
+    
+    
+    
+}

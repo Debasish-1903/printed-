@@ -1921,6 +1921,8 @@ int main(){
 
 /*Make contiguous intervals for each row and column.
 
-We make a set of intervals for each row and column to represent the cells that have been visited in that particular row or column. When we have to reach another cell (r,c) use lower_bound/upper_bound to find the correct place. Merge the contiguous intervals.
+We make a set of intervals for each row and column to represent the cells that have 
+been visited in that particular row or column. When we have to reach another cell (r,c)
+use lower_bound/upper_bound to find the correct place. Merge the contiguous intervals.
 
 Time Complexity per test case: O(N logN) */

@@ -1707,10 +1707,10 @@ int main() {
 
 
 
-/*Robot Movements AZ101
+/*Robot Movements AZ101 (achiver)
 
 Time-Limit: 1 sec Score: 0.00/100
-Difficulty : 
+Difficulty :  ***
  Memory: 256 MB Accepted Submissions: 100
 Description
 
@@ -1774,10 +1774,7 @@ For the first test case, (2,3) -> (3,3) -> (1,3) -> (1,2)
 
 For the second test case, (2,2) -> (3,2) -> (3,3) -> (4,3) -> (4,4)*/
 
- 
-We make a set of intervals for each row and column to represent the cells that have been visited in that particular row or column. When we have to reach another cell (r,c) use lower_bound/upper_bound to find the correct place. Merge the contiguous intervals.
 
-Time Complexity per test case: O(N logN)
 
  
 

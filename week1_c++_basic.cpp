@@ -1923,3 +1923,61 @@ been visited in that particular row or column. When we have to reach another cel
 use lower_bound/upper_bound to find the correct place. Merge the contiguous intervals.
 
 Time Complexity per test case: O(N logN) */
+
+//likely simpler code 
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--){
+		int N,R,C,x,y;
+		cin>>N>>R>>C>>x>>y;
+		vector<vector<bool>> v(R + 1, vector<bool>(C + 1, false));
+		v[x][y]=true;
+		string s;
+		cin>>s;
+		for(int i=0;i<s.size();i++){
+			if(s[i]=='S'){
+				while(v[x][y] && x<=R && x>=1){
+						x++;
+				}
+			
+				v[x][y]=true;
+
+			}
+			if(s[i]=='N'){
+				
+				while(v[x][y] && x<=R && x>=1){
+						x--;
+
+				}
+				
+				v[x][y]=true;
+
+			}
+			if(s[i]=='E'){
+				
+				while(v[x][y] && y>=1 && y<=C){
+						y++;
+
+				}
+				
+				v[x][y]=true;
+
+			}
+			if(s[i]=='W'){
+				
+				while(v[x][y] && y<=C &&y>=1){
+						y--;
+
+				}
+				v[x][y]=true;
+
+			}
+		}
+		cout<<x<<" "<<y<<endl;
+
+
+	}}

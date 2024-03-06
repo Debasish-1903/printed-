@@ -732,6 +732,8 @@ Sample Output 1
 
 10*/
 
+//(m+n)cm or (m+n)cn
+
 vector<ll>fac;
 // precomputation of m+n factorials
 void pre(){

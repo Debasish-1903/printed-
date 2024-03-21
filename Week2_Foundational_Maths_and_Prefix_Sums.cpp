@@ -1352,7 +1352,7 @@ int main()
     return 0;
 }
 
-/*Mobile Notifications AZ101
+/*Mobile Notifications AZ101   ⭐⭐⭐⭐(imp )
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 

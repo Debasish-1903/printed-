@@ -1699,6 +1699,41 @@ Add the 2nd range -> S = {1,5,4,3,1,5,4}.
 
 After sorting the array, S = {1,1,3,4,4,5,5}.*/
 
+/*Hint 1
+
+The problem is to find the kthkth smallest element in the sorted list of integers obtained by concatenating the elements of given ranges. One direct approach to solve this problem would be to concatenate all the elements of the ranges into a list and sort it. Then, we can find the kthkth smallest element in the sorted list.
+
+However, adding each element of the ranges into the list S is a costly process. Therefore, we need a more efficient approach. Can you find which element in the array AA occurs how many times in the final array SS?
+Hint 2
+
+We can use the partial sums concept to find the contribution of each index in the array AA in the final array SS.
+Solution Approach
+
+Check the video solution
+
+https://www.youtube.com/watch?v=F43IOF2MJKo
+Solution 1
+
+    By idea of partial sums find keep track of which ranges are added in the final array
+    Calculating the prefix sum of the partial sums array will give us the frequency of each element added in the final array.
+    To find the smallest element, sort the elements in the final array, make sure you also keep track of their frequency. An easy way to do this is use a vector of pairs where the first element will be the element value and the second element is the frequency of that number.
+    Once we have the sorted order, we just need to find the KKth smallest now. How to find this?
+    At any index can you find the number of elements which has occured before that particular element?
+    Yes! We need to calculate the prefix sums of the frequency of each element. By doing that at any particular value we can say from the prefix sums array how many elements has occured before that element.
+    From the prefix sums array using binary search find where kk lies in the prefix sums array. The result will contain the index where the value of prefix sums just exceeds or equals kk. Getting the element will be easy if we use the index for accessing the element from the vector of pairs.
+    Time complexity of this approach : O(Nlog⁡N+N+Qlog⁡N)O(NlogN+N+QlogN) for sorting, calculating the prefix sums array, and using binary search to find position of each k
+
+Solution 2
+
+This solution is almost same to the other version. Only difference here is, since we know the queries beforehand, so we can preprocess them in such a way that in one iteration through the prefix sums array of frequency of elements we can directly find out answers for all the queries. To do that sort the queries on the basis of the value kk. Keep track of the query number too, since that would be important when printing the final answer. After having the sorted queries, just keep moving through the prefix frequency array, whenever you encounter a value from the query array which exceeds or equals the prefix sums array we know that we found our element. Store the answer.
+Time complexity of this approach : O(Nlog⁡N+Qlog⁡Q+N)O(NlogN+QlogQ+N) for sorting, sorting queries, and iterating through the prefix sums array.
+Code
+Solution 1
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
 void solve() {
   ll n, k, q, i, a, b, x;
   cin >> n >> k >> q;
@@ -1737,6 +1772,294 @@ void solve() {
     }
   }
   cout << endl;
+}
+
+int main() {
+  // #ifndef ONLINE_JUDGE
+  // freopen("input.txt","r",stdin);
+  // freopen("output.txt","w",stdout);
+  // #endif
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  int i, T;
+
+  T = 1;
+  cin >> T;
+
+  for (i = 1; i <= T; i++) {
+    solve();
+  }
+  return 0;
+}
+
+Solution 2
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+#define LD long double
+
+const int N = 100010;
+
+int inf = 1e9;
+int mod = 1e9 + 7;
+
+signed main()
+{
+    //freopen("IN", "r", stdin);
+    //freopen("OUT", "w", stdout);
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+
+    int _; cin >> _;
+    while(_--) {
+        int n, m, q;
+        cin >> n >> m >> q;
+        pair<int,int> A[n];
+        for(int i = 0; i < n; i++) {
+            cin >> A[i].first;
+            A[i].second = 0;
+        }
+        for(int i = 0; i < m; i++) {
+            int l, r; cin >> l >> r;
+            l--; r--;
+            A[l].second++;
+            if(r + 1 < n) A[r + 1].second--;
+        }
+        for(int i = 1; i < n; i++)
+            A[i].second += A[i - 1].second;
+
+        sort(A, A + n);
+
+        int ans[q];
+        pair<ll,int> Q[q];
+        for(int i = 0; i < q; i++) {
+            cin >> Q[i].first;
+            Q[i].second = i;
+        }
+
+        sort(Q, Q + q);
+
+        int ptr = 0;
+        ll sum = 0;
+
+        for(int i = 0; i < q; i++) {
+            ll x = Q[i].first;
+            while(ptr < n && sum + A[ptr].second < x) {
+                sum += A[ptr].second;
+                ptr++;
+            }
+            if(ptr < n) ans[Q[i].second] = A[ptr].first;
+            else ans[Q[i].second] = -1;
+        }
+
+        for(int i = 0; i < q; i++)
+            cout << ans[i] << " ";
+        cout << "\n";
+    }
+    return 0;
+}
+*/
+
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define ld long double
+#define pb push_back
+#define mp make_pair
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define vi vector<int>
+#define vl vector<ll>
+#define vpii vector<pii>
+#define vpll vector<pll>
+#define all(x) (x).begin(), (x).end()
+#define F first
+#define S second
+#define lb lower_bound
+#define ub upper_bound
+#define sz(x) (int)(x).size()
+#define nl "\n"
+
+const int mod = 1e9 + 7;
+const int N = 1e5 + 5;
+
+/*ll gcd(ll a, ll b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
+}
+
+ll lcm(ll a, ll b) {
+    return (a / gcd(a, b)) * b;
+}
+
+ll binpow(ll a, ll b) {
+    ll res = 1;
+    while (b > 0) {
+        if (b & 1) res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
+    }
+    return res;
+}
+
+ll add(ll a, ll b) {
+    return (a + b) % mod;
+}
+
+ll sub(ll a, ll b) {
+    return (a - b + mod) % mod;
+}
+
+ll mul(ll a, ll b) {
+    return (a * b) % mod;
+}
+
+ll inv(ll a) {
+    return binpow(a, mod - 2);
+}
+
+struct dsu {
+    vector<ll> parent, size;
+    dsu(ll n) {
+        parent.resize(n);
+        size.resize(n, 1);
+        for (ll i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+    }
+    int find(ll x) {
+        if (parent[x] == x) return x;
+        return parent[x] = find(parent[x]);
+    }
+    void unite(ll x, ll y) {
+       ll root_x = find(x);
+        ll root_y = find(y);
+        if (root_x != root_y) {
+            if (size[root_x] < size[root_y]) swap(root_x, root_y);
+            parent[root_y] = root_x;
+            size[root_x] += size[root_y];
+        }
+    }
+};
+
+*/
+
+
+void solve(){
+	
+   ll n,m,k;
+   cin>>n>>m>>k;
+   
+   vl arr(n+1),pre(n+2,0),dp(n+1);
+   vector<pair<ll,ll>>suff(n+1);
+   
+   arr[0]=0;
+   for(ll i=1;i<=n;i++){
+    cin>>arr[i];
+   }
+   
+   
+   for(ll i=0;i<m;i++){
+    ll a,b;
+    cin>>a>>b;
+    
+    pre[a]+=1;
+    pre[b+1]-=1;
+   }
+   
+   for(ll i=1;i<n+2;i++){
+    pre[i]+=pre[i-1];
+   }
+   
+   
+   for(ll i=1;i<=n;i++){
+    suff[i]=make_pair(arr[i],pre[i]);
+   }
+   
+   
+   sort(suff.begin(),suff.end());
+   
+   dp[0]=0;
+   for(ll i=1;i<=n;i++){
+    
+    if(i==1)dp[i]=suff[i].S;
+    else  dp[i]=dp[i-1]+suff[i].S;
+     
+    
+   }
+ 
+ 
+ 
+ 
+//  cout<<"pre ";
+   
+//   for(auto it:pre)cout<<it<<" ";
+//   cout<<nl;
+   
+//   cout<<"suff:";
+//   for(auto it:suff)cout<<it.F<<":"<<it.S<<" ";
+//   cout<<nl;
+   
+//     cout<<"dp :";
+//   for(auto it:dp)cout<<it<<" ";
+//   cout<<nl<<nl;
+   
+   
+   
+   
+   
+   while( k--){
+     
+    ll y;
+    cin>>y;
+    
+    if(lower_bound(dp.begin(),dp.end(),y)!=dp.end()){
+        
+        ll x=lower_bound(dp.begin(),dp.end(),y)-dp.begin();
+        
+       // cout<<x<<" ";
+       
+       cout<<suff[x].F<<" ";
+    }else{
+        cout<<-1<<" "; 
+    }
+        
+  
+   }
+   
+         
+      //  
+       
+           cout<<nl; 
+    
+    
+   
+   
+	
+}
+
+signed main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    // your code goes here
+    
+    ll t;
+    cin>>t;
+    while(t--)
+    	solve();
+
+    return 0;
 }
 
 

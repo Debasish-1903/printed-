@@ -1,4 +1,4 @@
-/*Support Queries II
+/*Support Queries II⭐
 
 Time-Limit: 1 sec Score: 50.00/100
 Difficulty : 
@@ -122,7 +122,7 @@ void solve() {
     }
 }
 
-/*Alice and Books
+/*Alice and Books  ⭐
 
 Time-Limit: 10 sec Score: 1.00/100
 Difficulty : ***
@@ -249,7 +249,7 @@ cout<<nl;
 	
 }
 
-/*Largest Rectangle
+/*Largest Rectangle⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : **
@@ -550,7 +550,7 @@ cnti values can be maintained using Map in STL C++.*/
 Space complexity: O(N) extra space*/
 
 
-/*Molecular Formula
+/*Molecular Formula ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : ***
@@ -690,7 +690,7 @@ string solve(string formula) {
 }
 
 
-/*Rain Water
+/*Rain Water⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -903,7 +903,7 @@ void solve(){
 //Time Complexity per test case: O(N log N)
 
 
-/*Rebuild Original Array
+/*Rebuild Original Array⭐
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : ***
@@ -1086,7 +1086,7 @@ int main()
 }
 
 
-/*Super Minimum Sum
+/*Super Minimum Sum⭐
 
 Time-Limit: 1 sec Score: 50.00/100
 Difficulty : **
@@ -1298,7 +1298,7 @@ signed main()
 }
 
 
-/*Min Stack
+/*Min Stack⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -1572,7 +1572,7 @@ public:
 };
 
 
-/*Height of Soldiers
+/*Height of Soldiers⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : ****
@@ -1737,7 +1737,7 @@ Time Complexity: O(N)
 
 */
 
-/*Running Mean, Median and Mode AZ101
+/*Running Mean, Median and Mode AZ101⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -2019,7 +2019,7 @@ to find the maximum occurring number.
 Time Complexity per test case: O(Q log Q)*/
 
 
-/*LRU Cache
+/*LRU Cache⭐⭐
 
 Time-Limit: 2 sec Score: 100.00/100
 Difficulty : ****
@@ -2801,7 +2801,7 @@ simply print the first element of the set.
 Time Complexity per test case: O(Q log Q)*/
 
 
-/*Product of the Last K numbers
+/*Product of the Last K numbers⭐
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : ***
@@ -3270,7 +3270,7 @@ Time Complexity per test case: O(N * log(W + H))
 */
 
 
-/*Snapshot Array
+/*Snapshot Array⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : ****

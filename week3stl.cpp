@@ -1269,7 +1269,7 @@ signed main(){
 }
 
 
-/* Deque AZ101
+/* Deque AZ101⭐
 
     Time-Limit: 1 sec Score: 100.00/100
 
@@ -3252,7 +3252,7 @@ signed main(){
 }
 
 
-/* Minimal String AZ101
+/* Minimal String AZ101⭐
 
     Time-Limit: 1 sec Score: 1.00/100
 
@@ -3455,7 +3455,7 @@ signed main(){
 }
 
 
-/* Valid Parentheses AZ101
+/* Valid Parentheses AZ101⭐
 
     Time-Limit: 1 sec Score: 75.00/100
 
@@ -3660,7 +3660,7 @@ signed main(){
 }
 
 
-/* Maximum in Window
+/* Maximum in Window⭐
 
     Time-Limit: 1 sec Score: 100.00/100
 
@@ -4725,7 +4725,7 @@ signed main(){
 }
 
 
-/* Buy Maximum Objects II
+/* Buy Maximum Objects II⭐
 
     Time-Limit: 1 sec Score: 75.00/100
 
@@ -6859,7 +6859,7 @@ signed main(){
 }
 
 
-/* Interesting Game
+/* Interesting Game⭐
 
     Time-Limit: 1 sec Score: 1.00/100
 

@@ -1,7 +1,7 @@
 
 all 11 questions of backtracking is important
 
-/*All Permutations
+/*All Permutations  ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : *
@@ -127,7 +127,7 @@ for(ll i=0;i<n;i++){
 rec(0);	
 }
 
-/*Kth Permutation - easy version
+/*Kth Permutation - easy version ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : *
@@ -317,7 +317,7 @@ signed main()
     return 0;
 }
 
-/*Queens On Chessboard
+/*Queens On Chessboard ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -457,7 +457,7 @@ for(int i=0;i<n;i++){
 cout<<rec(0)<<nl;	
 }
 
-/*Kth Permutation - hard version
+/*Kth Permutation - hard version ⭐
 
 Time-Limit: 1 sec Score: 75.00/100
 Difficulty : ***
@@ -556,7 +556,7 @@ void solve()
     }
 }
 
-/*N-Queens Revisited
+/*N-Queens Revisited ⭐
 
 Time-Limit: 3 sec Score: 1.00/100
 Difficulty : **
@@ -633,7 +633,7 @@ void solve() {
   cout << ans << "\n";
 }
 
-/*Generate Balanced Parenthesis - easy version
+/*Generate Balanced Parenthesis - easy version ⭐
 
 Time-Limit: 1 sec Score: 75.00/100
 Difficulty : **
@@ -717,7 +717,7 @@ void solve(){
 	
 }
 
-/*Generate Balanced Parenthesis - medium version
+/*Generate Balanced Parenthesis - medium version ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -832,7 +832,7 @@ signed main()
     return 0;
 }
 
-/*Prime Palindromes (unsolved)
+/*Prime Palindromes (unsolved) ⭐
 
 Time-Limit: 5 sec Score: 0/100
 Difficulty : **
@@ -869,7 +869,89 @@ Sample Output 1
 
 12*/
 
-/*Target Subsets
+//approach
+/*Generate the palindromes and see if they are prime.
+Hint 2
+
+Find all palindrome numbers and then judge whether they are prime numbers (prime numbers).
+Solution Approach
+
+Generate all palindrome numbers and see if they are prime or not. One optimization that you can do, 
+generate only the first half of the number and the second half will be opposite of first. And now check
+for whether it is a prime number or not. You can do it with square root trick discussed in math module.
+
+Time complexity: O(10MAXLEN / 2 x sqrt(MAXNUM))
+Code*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+
+ll ans = 0;
+
+bool isPrime(ll x) {
+	for(ll i = 2; i * i <= x; i++) {
+		if(x % i == 0) 
+			return false;
+	}
+	return true;
+}
+
+void solve(ll cur, ll totalLen, ll curLen, ll a, ll b) {
+	if(curLen == (totalLen + 1) / 2) {
+		vector<int> d;
+		ll temp = cur;
+		while(temp) {
+			d.push_back(temp % 10);
+			temp /= 10;
+		}
+		temp = cur;
+		for(int i = (totalLen % 2); i < (int)d.size(); i++) {
+			temp *= 10;
+			temp += d[i];
+		}
+		if(temp <= b && temp >= a && isPrime(temp)) {
+			ans++;
+		}
+		return;
+	}
+
+	for(ll i = 0; i < 10; i++) {
+		cur *= 10; cur += i;
+		solve(cur, totalLen, curLen + 1, a, b);
+		cur /= 10;
+	}
+	return;
+} 
+
+signed main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    ll a, b;
+    cin >> a >> b;
+
+    ll len = 0, temp = b;
+    while(temp) {
+    	len++;
+    	temp /= 10;
+    }
+
+    for(ll i = 1; i <= len; i++) {
+    	for(ll j = 1; j < 10; j++) {
+    		solve(j, i, 1LL, a, b);
+    	}
+    }
+
+    cout << ans << "\n";
+
+    return 0;
+}```
+
+
+/*Target Subsets (meet in the middle) ⭐
 
 Time-Limit: 3 sec Score: 1.00/100
 Difficulty : ***
@@ -980,8 +1062,100 @@ void solve(){
     subsets[1].clear();
 }
 
+//2nd approach
+/*Hint 1
 
-/*Four Values
+You can generate all subsets with the time complexity of 2N. But it's not enough to pass the limits.
+Hint 2
+
+Divide the array into two parts, one is of size N / 2 and the other is of size N - N / 2.
+Solution Approach
+
+Brute force won't pass the limits. So we have to apply to optimize brute force techniques.
+
+Divide the array into two parts of size N / 2 each. Generate all subset sums for each part with complexity O(2N/2). 
+Observe that generating 2N/2 subsets are within the limits (235/2 ~ 105).
+
+Sort all subset sums for each part. Now iterate over the first half, for each subset-sum Si in the first half we have t
+o find the number of subsets in the second half with sum ≤ X - Si. You can find it using different techniques like binary search, or two pointers.
+
+This trick is called meet-in-the-middle. This trick will be discussed in more detail in the session.
+
+Time Complexity: O(N 2N/2)
+Space Complexity: O(2N/2)
+Code
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+
+signed main() 
+{
+    ios::sync_with_stdio(0); 
+    cin.tie(0); cout.tie(0);   
+    
+    int T; cin >> T;
+    while(T--) {
+        int n, x; 
+        cin >> n >> x;
+        
+        vector<int> aL, aR;
+        for(int i = 0; i < n / 2; i++) {
+            int x; cin >> x;
+            aL.push_back(x);
+        }
+        for(int i = n / 2; i < n; i++) {
+            int x; cin >> x;
+            aR.push_back(x);
+        }
+
+        vector<int> left, right;
+
+        int m = (int)aL.size();
+        for(int i = 0; i < (1 << m); i++) {
+            int sum = 0;
+            for(int j = 0; j < m; j++) {
+                if((i >> j) & 1) {
+                    sum += aL[j];
+                }
+            }
+            left.push_back(sum);
+        }
+        
+        m = (int)aR.size();
+        for(int i = 0; i < (1 << m); i++) {
+            int sum = 0;
+            for(int j = 0; j < m; j++) {
+                if((i >> j) & 1) {
+                    sum += aR[j];
+                }
+            }
+            right.push_back(sum);
+        }
+
+        sort(left.begin(), left.end());
+        sort(right.begin(), right.end());
+
+        ll ans = 0;
+
+        int ptr = (int)right.size() - 1;
+        for(int u : left) {
+            if(u > x) break;
+            while(ptr >= 0 && right[ptr] + u > x) {
+                ptr--;
+            }
+            ans += ptr + 1;
+        }
+
+        cout << ans << "\n";
+    }
+}```
+
+
+
+
+/*Four Values (meet in the middle)⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -1024,6 +1198,20 @@ Note
 
 Four values are {2, 8, 3, 2}.*/
 
+/*hint 1:
+You can apply brute force with O(n4) complexity, but this solution won't pass the constraints.
+Hint 2
+
+Try to optimize the loop, and calculate values in the pairs.
+Solution Approach
+
+Maintain two-pointers and one hash table. Let the two pointers are lo and hi.  
+For current {lo, hi} pair, the hash table contains all two-sums possible for all pairs with indices less than lo.
+So if x - alo - ahi exists in the hash table then it's good, and we'll return directly from it. If not increment hi.
+When it's time to increment lo to lo + 1, include all pairs two-sums with one index as lo in the hash table.
+
+Please refer to the editorial solution for more clarity.*/
+
 signed main()
 {
     ios_base::sync_with_stdio(0);
@@ -1065,7 +1253,7 @@ signed main()
     return 0;
 }
 
-/*Modulo Subsequences
+/*Modulo Subsequences(meet in the middle)
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : 
@@ -1106,6 +1294,23 @@ Note
 
 You can choose a sequence b={1,2}, so the sum (5 + 2) is equal to 7 
 (and that's 3 after taking it modulo 4).*/
+
+/*hint 1:Generate all 2n subsets and for each subset take mod w.r.t. m, and print the one which is the maximum.
+But this solution won't pass the constraints. We've to optimize it.
+Hint 2
+
+Use the meet-in-the-middle to optimize the brute solution.
+Solution Approach
+
+We can use meet-in-the-middle technique to optimize it to O(2n/2*log(2n/2)). Preprocess the first n / 2 elements naively
+and push sums modulo m to some array. After this process the second half with the following algorithm.
+
+Now we have two bigger sets, first one with first n / 2 elements, and the second one with the later n / 2 elements.
+
+Iterate over each smaller sets from the first bigger set. Let the modulo sum of the current set is x. We know that the sum 
+of modulo values of two different sets won't increase beyond 2m. So now our target is to find the largest modulo sum in the 
+second bigger set with modulo sum < m - x. We can find this using binary search, or upper_bound/lower_bound. Note that if we 
+choose a subset with module sum greater than m - x from the second bigger set, then the net modulo sum will be less than x. */
 
 
 int main() 
@@ -1324,7 +1529,7 @@ signed main()
 
 }
 
-/*Bubble Sort Swap Parity⭐
+/*Bubble Sort Swap Parity⭐(dnc)
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : 
@@ -1460,7 +1665,7 @@ signed main()
     return 0;
 }
 
-/*Prime Cycles
+/*Prime Cycles(r&backtrack) ⭐
 
 Time-Limit: 2 sec Score: 0/100
 Difficulty : ***
@@ -1532,11 +1737,109 @@ Two Prime Cycles are there: {1, 2, 3, 4}, {1, 4, 3, 2}.
 Explanation 3:
 Two Prime Cycles are there: {1, 4, 3, 2, 5, 6}, 
 {1, 6, 5, 2, 3, 4}.*/
+/*hint1:
+Since we have to find a distinct number of cycles. Without loss of generality, we can assume that the cycle starts with number 11.
+Hint 2
+
+Observe that when the two consecutive numbers are of the same parity, then the sum will be definitely going to divisible by 22.
+Solution Approach
+
+The brute force solution will be to generate all N! permutations and check for each whether it is a prime cycle or not. 
+But this solution will not pass the limits. We have to perform some kind of optimizations.
+
+Let's note down some observations.
+
+    Since we have to find a distinct number of cycles. Without loss of generality, we can assume that the cycle starts with number 1.
+    Hence, the two neighbouring in numbers in the prime cycle has to be of opposite parity. Using these observations we can
+    optimize the brute force solution.
+
+Level
+
+We can use the length of the sequence as our level. Here we use the remaining number of items to be put to complete the sequence 
+as our level. In addition we keep track of the previous element in the sequence, the parity of the current element we are
+expecting and the limiting value of the sequence.
+Check
+
+Check if the sequence length generated is as desired and if the summation of the last element and the first element of the 
+sequence is a prime number too then we can increment our ans since its a valid solution.
+Choice
+
+At each recursive step we iterate through either even numbers or odd numbers whichever is required depending on the parity.
+While iterating for each element check if it has been already taken and if it along with the previous element sums up to a 
+prime number. If YES, we take this element in our sequence and transition forward.
+Transition
+
+When we take an element we update our previous element as the current element. This will serve as the previous element
+for the next recursion. We udpate our remaining number of numbers to fill the sequence and update the parity which we 
+need in our next recursion.
+Code
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+
+const int N = 100;
+
+ll ans = 0;
+bool isPrime[N];
+bool marked[N];
+vector<int> prime = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+
+void solve(int m, int n, int prev, int par)
+{
+    if (!m)
+    {
+        if (isPrime[prev + 1])
+        {
+            ans++;
+        }
+        return;
+    }
+    for (int i = 1 + par; i <= n; i += 2)
+    {
+        if (!marked[i] && isPrime[i + prev])
+        {
+            marked[i] = true;
+            solve(m - 1, n, i, 1 - par);
+            marked[i] = false;
+        }
+    }
+    return;
+}
+
+signed main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    int n;
+    cin >> n;
+
+    if (n % 2 == 1)
+    {
+        cout << "0\n";
+        return 0;
+    }
+
+    memset(isPrime, false, sizeof(isPrime));
+    memset(marked, false, sizeof(marked));
+
+    for (int u : prime)
+    {
+        isPrime[u] = true;
+    }
+
+    marked[1] = true;
+    solve(n - 1, n, 1, 1);
+
+    cout << ans << "\n";
+}
 
 
 
-
-/*Count Valid Grid Paths
+/*Count Valid Grid Paths (_rec&back) ⭐
 
 Time-Limit: 3 sec Score: 0.00/100
 Difficulty : ****
@@ -1547,6 +1850,8 @@ Description
 There are 88418 paths in a 7×7 grid from the upper-left square to 
 the lower-left square. Each path corresponds to a 48-character 
 description consisting of characters D (down), U (up), L (left) and R (right).
+
+https://lh5.googleusercontent.com/W5SQNDF90l8RCGOD1OKdoK8uHRDbgc_SeGwwVW8iWo3fPQnmj0X4UxekYO1bs4EAWRv99Mg_srUpGbOFf_Malf7BBuWMs3eQ0AEu26f9mzIVhj7EqbNjJMcGgU1lLZBSM329Nwf8
 
 For example, the path corresponds
 to the description DRURRRRRDDDLUULDDDLDRRURDDLLLLLURULURRUULDLLDDDD.
@@ -1574,8 +1879,339 @@ Sample Output 1
 
 201*/
 
+/*Hint 1
 
-/*4 Reversals
+Generate all paths and try to check which one is matching with the given string. 
+Hint 2
+
+Complete brute force will not pass the test cases. You have to prune your algorithm. There are several ways to do that. 
+But you've to avoid travelling through the path, which we can guarantee that will never lead us to the correct path.
+Solution Approach
+
+Do complete space search of the grid. But this would be slow. You have to optimize your code.
+
+Some of the optimizations that you can do.
+
+    In any solution, we first move one step down or right. There are always two paths that are symmetric about the diagonal 
+    of the grid after the first step.
+    If the path reaches the lower-right square before it has visited all other squares of the grid, it is clear that it will 
+    not be possible to complete the solution.
+    If the path touches a wall and can turn either left or right, the grid splits into two parts that contain unvisited squares.
+    The idea of Optimization 3 can be generalized: if the path cannot continue forward but can turn either left or right, the
+    grid splits into two parts that both contain unvisited squares.
+
+Note: The editorial solution uses different optimization tricks. You can look into it.
+Code
+*/
+#include <bits/stdc++.h>
+
+#define lli long long int
+
+#define li long int
+
+#define ld long double
+
+using namespace std;
+
+const lli mod = 1e9 + 7;
+
+const int n = 7;
+
+bool visited[n][n];
+
+int reserved[49];
+
+
+
+void move(int r, int c, int &ans, int &steps)
+
+{
+
+    if (r == n - 1 && c == 0)
+
+    {
+
+        ans += (steps == n * n - 1);
+
+        return;
+
+    }
+
+
+
+    // if you hit a wall or a path (can only go left or right); return
+
+    if (((r + 1 == n || (visited[r - 1][c] && visited[r + 1][c])) && c - 1 >= 0 && c + 1 < n && !visited[r][c - 1] && !visited[r][c + 1]) ||
+
+        ((c + 1 == n || (visited[r][c - 1] && visited[r][c + 1])) && r - 1 >= 0 && r + 1 < n && !visited[r - 1][c] && !visited[r + 1][c]) ||
+
+        ((r == 0 || (visited[r + 1][c] && visited[r - 1][c])) && c - 1 >= 0 && c + 1 < n && !visited[r][c - 1] && !visited[r][c + 1]) ||
+
+        ((c == 0 || (visited[r][c + 1] && visited[r][c - 1])) && r - 1 >= 0 && r + 1 < n && !visited[r - 1][c] && !visited[r + 1][c]))
+
+        return;
+
+
+
+    visited[r][c] = true;
+
+
+
+    if (reserved[steps] != -1)
+
+    {
+
+        switch (reserved[steps])
+
+        {
+
+        case 0:
+
+            if (r - 1 >= 0)
+
+            {
+
+                if (!visited[r - 1][c])
+
+                {
+
+                    steps++;
+
+                    move(r - 1, c, ans, steps);
+
+                    steps--;
+
+                }
+
+            }
+
+            break;
+
+
+
+        case 1:
+
+            if (c + 1 < n)
+
+            {
+
+                if (!visited[r][c + 1])
+
+                {
+
+                    steps++;
+
+                    move(r, c + 1, ans, steps);
+
+                    steps--;
+
+                }
+
+            }
+
+            break;
+
+
+
+        case 2:
+
+            if (r + 1 < n)
+
+            {
+
+                if (!visited[r + 1][c])
+
+                {
+
+                    steps++;
+
+                    move(r + 1, c, ans, steps);
+
+                    steps--;
+
+                }
+
+            }
+
+            break;
+
+
+
+        case 3:
+
+            if (c - 1 >= 0)
+
+            {
+
+                if (!visited[r][c - 1])
+
+                {
+
+                    steps++;
+
+                    move(r, c - 1, ans, steps);
+
+                    steps--;
+
+                }
+
+            }
+
+            break;
+
+        }
+
+        visited[r][c] = false;
+
+        return;
+
+    }
+
+
+
+    // move down
+
+    if (r + 1 < n)
+
+    {
+
+        if (!visited[r + 1][c])
+
+        {
+
+            steps++;
+
+            move(r + 1, c, ans, steps);
+
+            steps--;
+
+        }
+
+    }
+
+
+
+    // move right
+
+    if (c + 1 < n)
+
+    {
+
+        if (!visited[r][c + 1])
+
+        {
+
+            steps++;
+
+            move(r, c + 1, ans, steps);
+
+            steps--;
+
+        }
+
+    }
+
+
+
+    // move up
+
+    if (r - 1 >= 0)
+
+    {
+
+        if (!visited[r - 1][c])
+
+        {
+
+            steps++;
+
+            move(r - 1, c, ans, steps);
+
+            steps--;
+
+        }
+
+    }
+
+
+
+    // move left
+
+    if (c - 1 >= 0)
+
+    {
+
+        if (!visited[r][c - 1])
+
+        {
+
+            steps++;
+
+            move(r, c - 1, ans, steps);
+
+            steps--;
+
+        }
+
+    }
+
+    visited[r][c] = false;
+
+}
+
+
+
+int main()
+
+{
+
+    ios_base::sync_with_stdio(false);
+
+    cin.tie(NULL);
+
+    string path;
+
+    cin >> path;
+
+    for (int i = 0; i < path.length(); i++)
+
+    {
+
+        if (path[i] == '?')
+
+            reserved[i] = -1;
+
+        else if (path[i] == 'U')
+
+            reserved[i] = 0;
+
+        else if (path[i] == 'R')
+
+            reserved[i] = 1;
+
+        else if (path[i] == 'D')
+
+            reserved[i] = 2;
+
+        else if (path[i] == 'L')
+
+            reserved[i] = 3;
+
+    }
+
+    int ans = 0, steps = 0;
+
+    move(0, 0, ans, steps);
+
+    cout << ans;
+
+    return 0;
+
+}```
+
+
+
+/*4 Reversals (meet in the middle) 
 
 Time-Limit: 5 sec Score: 0.00/100
 Difficulty :**** 
@@ -1651,10 +2287,159 @@ abdec → abced
 abced → aecbd
 aecbd → bcead
 bcead → bdaec*/
+/*Hint 1
+For a string of length N, you have to consider all strings obtained by reversal of any substring of that string.
+	Of all such strings generated, check if any one of them is the target string. This is the Brute Force approach to the problem. 
+Hint 2
+
+For a string of length N, how many substrings are possible? N^2 different strings are possible by their substring 
+reversal. In total there has to be 4 transitions taking place. In the first step, N^2 different strings are formed,
+	then for each of these strings, another set of N^2 different strings is obtained. This process is repeated 
+four times in total, till you get one string the same as the original string. 
+
+S → S1 → S2 → S3 → T
+
+At each of the four recursion stacks, there are N^2 choices of strings. Each of these steps takes O(N^2 ) time. 
+	So total Time Complexity becomes O(N*(N^2)^k ) . where k is the total number of steps (i.e. k=4 ). 
+	Additional O(N) is because of the reversal of the string, in the recursion stack.
+
+Hence, by using Brute Force total time complexity becomes O(N^9). This is too big even with the given constraints. 
+	Can you do better than this?
+
+
+ 
+Solution Approach
+
+Here, the above brute force logic can be optimized to a great extent using the Meet in the Middle concept. 
+One crucial observation to the problem is that, from S by reversing some substring we can obtain S1, similarly,
+by reversing some substring of S1 we can obtain S again. 
+
+Hence, S ↔ S1. 
+
+Generally in the meet in the middle concept, we try to divide the element in half. So here we are dividing the
+recursion level (or the number of moves left ) in half. So from each string, we are going to apply 2 moves, 
+to reach a certain S2 string.       S → S1 → S2
+
+Again starting from the target string T, we are applying two moves to reach S2 .  S2 ← S3 ← T 
+
+Generate all possible values of S2 from both S and T strings,  and check if there are any two components similar. 
+
+
+This reduces the Time Complexity to a great extent. How?
+
+To generate all distinct S2 from S will take O((N^2)^k) with k=2 i.e. O(N^4) time. Similarly to
+generate all S2 from the T string will take O(N^4) time.  They are stored in set gen1 and gen2 respectively.
+Also, the reversal of string in all recursion stacks will be O(N) in total.  Finally, the sets will contain O(N^4) elements.
+And checking the set for the presence of the same S2 string will take up O(N^4 logN). Hence, the final time 
+complexity becomes O(N^5 logN) . Thus Meet in the Middle greatly reduces the time complexity of the code.
+
+ 
+
+EXAMPLE RUN : 
+
+1
+
+abdec
+
+bdaec
+
+From S = abdec , there are two reversals to obtain : S2 = aecbd 
+
+[ abdec → abced and abced → aecbd ]
+
+From T = bdaec , there are two reversals to obtain : S2 = aecbd 
+
+[ bdaec → bcead and bcead → aecbd ]
+
+
+ 
+Code*/
+
+#include<bits/stdc++.h>
+
+using namespace std;
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+using lli =  int long long;
+lli n,n2;
+lli tot = 1e9+10;
+set<string> gen;
+
+string reverse1(string s , int l ,int r){
+    reverse(s.begin()+l,s.begin()+r+1);
+    return s;
+}
+
+
+// generates all posible strings from substring reversal with k moves left
+void brute(string st , int k){
+
+    if(k==0){ 
+        gen.insert(st);
+        return;
+    }
+    int l=0;int r = st.length()-1;
+
+   for(int i=0;i<=r;i++){
+        for(int j=i;j<=r;j++){
+            string s2 = st;
+            s2 = reverse1(st,i,j);
+            brute(s2,k-1);
+        }   
+    }
+    
+}
+
+
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    // for getting input from input.txt
+    freopen("input.txt", "r", stdin);
+    // for writing output to output.txt
+    freopen("output.txt", "w", stdout);
+    #endif
+    
+    IOS
+    lli t;
+    
+    cin>>t;
+    while(t--){
+        string s,t;
+        cin >> s >> t;
+        set<string> gen1;
+        set<string> gen2;
+        
+        brute(s,2);
+        gen1=gen;      //Stores all possible values of S2 after 2 step substring reversal from S
+        gen.clear();
+     
+        brute(t,2);
+        gen2=gen;       //Stores all possible values of S2 after 2 step substring reversal from T
+        gen.clear();
+        
+        //Check if any S2 value from the 2 sets are same.
+        int c=0;
+        for(auto it:gen1){
+            if(gen2.find(it)!=gen2.end()){
+                cout << "YES" <<"\n";
+                c=1;
+                break;
+            }
+            
+        }
+        if(!c)
+            cout << "NO" << "\n";
+    }
+    return 0;
+}
+
+//TIME COMPLEXITY
+// O(N^5 logN)```
 
 
 
-/*Karatsuba Multiplication
+
+/*Karatsuba Multiplication(devide and conquer)
 
 Time-Limit: 15 sec Score: 0.00/100
 Difficulty : **
@@ -1727,6 +2512,7 @@ A(x) = 5 + 2x + 6x^2 + 8x^3
 B(x) = 6x + x2 + 8x3
 
 C(x) = A(x) * B(x) = 30x + 17x^2 + 78x^3 + 70x^4 + 56x^5 + 64x^6*/
+
 
 
 /*Android Unlock Pattern
@@ -1894,4 +2680,158 @@ signed main()
     cout << ans << "\n";
     return 0;
 }
+
+
+/*Android Unlock Pattern (rec and back dive deep into lccm form) ⭐
+
+Hard
+
+Difficulty
+
+1 sec
+
+Time Limit
+
+256000KB
+
+Memory
+
+100
+
+Score
+Description
+
+Android mobile unlock pattern is a grid of 3 x 3 cells, where drawing a specific pattern connecting a specific 
+sequence of cells in order will unlock the android mobile.
+
+Given a number n, your task is to find the number of android unlock patterns connecting exactly n cells.
+
+Rules of a valid pattern:
+
+    Each pattern must connect exactly n cells.
+    All the cells must be distinct.
+    If the line connecting two consecutive cells in the pattern passes through any other cells, the other cells
+    must have previously selected in the pattern. No jumps through the non-selected cell is allowed.
+    The order of cells used matters.
+
+Input Format
+
+The only line of input contains a single integer n.
+Output Format
+
+Print answer on a new line.
+Constraints
+
+1 ≤ n ≤ 9
+Sample Input 1
+1
+Sample Output 1
+9
+Sample Input 2
+2
+Sample Output 2
+56
+
+
+*/
+
+
+/*Numbered the cells as
+1 2 3
+4 5 6
+7 8 9
+Hint 2
+
+Lets try out some examples.
+
+    6 - 5 - 4 - 1 - 9 - 2: It's a valid move.
+    4 - 1 - 9 - 2 : It's a invalid move, because line 1 - 9 passes through key 5 which had not been selected in the pattern. 
+    4 - 1 - 3 - 6 : It's a invalid move, because line 1 - 3 passes through key 2 which had not been selected in the pattern.
+
+Can you observe some pattern?
+Solution Approach
+
+We use DFS to count the number of valid paths from the current number (1–9)to the remaining numbers. To optimize, 
+	calling DFS less than 9 times, we can use the symmetry of the 3 by 3 matrix. If we start from 1 or 3 or 7 or 9,
+	the valid paths number should be the same. If we start from 2 or 4 or 6 or 8, the valid paths number are also the same.
+	Start from 5 is the third case.
+
+One of the invalid cases can be if you want to move your finger from 1 to 3, without selecting 2, that's not possible. 
+	Can you try it on your own Android phone?
+
+We need to create a matrix to keep a record of unselected numbers on the path between two keys.
+
+Now in DFS, we keep trying to find the next valid cell. What is a valid candidate? We need to make sure if the next
+cell hasn’t been visited, and either it’s adjacent to the current cell, or it’s the cell in between (recorded as the unselected number 
+on the path)but has been visited.
+Code
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+#define LD long double
+
+const int N = 100010;
+
+int inf = 1e9;
+int mod = 1e9 + 7;
+
+bool visited[10];
+int skip[10][10];
+
+int brute_force(int cur, int remLen) {
+    // base case : if remaining length done, then return 1 as 1 sequence found.
+    if(!remLen) return 1;
+    // Mark this cell visited.
+    visited[cur] = true;
+    int ans = 0;
+    // Try to take next cell as i
+    for(int i = 1; i <= 9; i++) {
+    	// If i is not already taken && either their is no cell to skip or the cell to skip is already selected.
+        if(!visited[i] && (!skip[cur][i] || visited[skip[cur][i]])) {
+            // try that option.
+            ans += brute_force(i, remLen - 1);
+        }
+    }
+    // revert the changes done.
+    visited[cur] = false;
+    return ans;
+}
+
+signed main()
+{
+    //freopen("IN", "r", stdin);
+    //freopen("OUT", "w", stdout);
+
+    memset(visited, false, sizeof(visited));
+    memset(skip, 0, sizeof(skip));
+    
+    // We are numbering
+    // 1 2 3
+    // 4 5 6
+    // 7 8 9
+
+    // These save the connection that skips a point.
+    skip[1][3] = skip[3][1] = 2;
+    // to join 1 and 3, 2 needs to be pre-selected, or its invalid move.
+    skip[1][7] = skip[7][1] = 4;
+    skip[3][9] = skip[9][3] = 6;
+    skip[7][9] = skip[9][7] = 8;
+    skip[1][9] = skip[9][1] = skip[2][8] = skip[8][2] = skip[3][7] = skip[7][3] = skip[4][6] = skip[6][4] = 5;
+    // This you will have to create manually.
+
+    int n;
+    cin >> n;
+
+    int ans = 0;
+    ans += brute_force(1, n - 1) * 4;   
+    //Symmetry as starting from 1 3 7 9 all will be similar
+    ans += brute_force(2, n - 1) * 4;   
+    //Symmetry as starting from 2 4 6 8 all will be similar
+    ans += brute_force(5, n - 1);
+
+    cout << ans << "\n";
+    return 0;
+}```
 

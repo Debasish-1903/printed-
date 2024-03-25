@@ -1,4 +1,6 @@
-/*Rotated Sorted Array
+
+ all bs quest are ⭐
+/*Rotated Sorted Array⭐
 
 Time-Limit: 2 sec Score: 100.00/100
 Difficulty : 
@@ -109,7 +111,7 @@ the first number and all numbers to the right of the inflection point are smalle
 than the first number.*/
 
 
-/*Bitonic Array
+/*Bitonic Array ⭐
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty :** 
@@ -870,7 +872,7 @@ cout<<cnt<<nl;
 
 
 
-/*Famous Painter Partition Problem
+/*Famous Painter Partition Problem ⭐
 
 Time-Limit: 4 sec Score: 100.00/100
 Difficulty : 
@@ -1022,7 +1024,7 @@ time to ensure that only K painters are doing the job, so we continue
 Time Complexity: O(N * log2(ΣXi))*/
 
 
-/*Kth Sum Value
+/*Kth Sum Value ⭐
 
 Time-Limit: 3 sec Score: 75.00/100
 Difficulty : ****
@@ -1136,7 +1138,7 @@ void solve(){
 }
 
 
-/*Consecutive one
+/*Consecutive one⭐
 
 Time-Limit: 2 sec Score: 100.00/100
 Difficulty : **
@@ -1255,7 +1257,7 @@ void solve(){
 	
 }
 
-/*Maximise the fraction
+/*Maximise the fraction⭐
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : ***
@@ -1401,8 +1403,8 @@ Time Complexity per test case: O(N * log2(ΣAi) * log2K)
    */
 
 
-
-/*Color Balls
+ 
+/*Color Balls ⭐
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : 
@@ -1560,7 +1562,7 @@ O(Nlog2N)
 */
 
 
-/*Number of Subarray with at most K distinct
+/*Number of Subarray with at most K distinct ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -1717,7 +1719,7 @@ For each subarray check using a frequency array how many distinct
  we make that as our right pointer boundary.*/
 
 
-/*Number of Subarray with sum at most K
+/*Number of Subarray with sum at most K ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -1997,7 +1999,7 @@ void solve(){
 }
 
 
-/*3 Sum
+/*3 Sum ⭐
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : 
@@ -2088,7 +2090,7 @@ We iterate through the array and fix the first number of the array
 
 
 
-/*Shortest Subarray
+/*Shortest Subarray ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : **
@@ -2495,7 +2497,7 @@ New array = {1,5,5}, median = 5.*/
 
 
 
-/*Count Unique Char in Substrings
+/*Count Unique Char in Substrings ⭐
 
 Time-Limit: 2 sec Score: 0.00/100
 Difficulty : 
@@ -2562,7 +2564,7 @@ Total score = 6*/
 
 
 
-/*Count Distinct Char in Substrings
+/*Count Distinct Char in Substrings ⭐
 
 Time-Limit: 2 sec Score: 0.00/100
 Difficulty : 

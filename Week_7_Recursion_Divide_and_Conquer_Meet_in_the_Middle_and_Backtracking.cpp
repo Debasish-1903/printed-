@@ -1,3 +1,6 @@
+
+all 11 questions of backtracking is important
+
 /*All Permutations
 
 Time-Limit: 1 sec Score: 100.00/100

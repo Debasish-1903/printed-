@@ -824,7 +824,7 @@ signed main()
 
 */
     
-    /* GCD of Products
+    /* GCD of Products ⭐
 
     Time-Limit: 4 sec Score: 0/100
 
@@ -1007,7 +1007,7 @@ signed main(){
 */
 
 
-/* Coloured Marbles
+/* Coloured Marbles ⭐
 
     Time-Limit: 2 sec Score: 0.00/100
 

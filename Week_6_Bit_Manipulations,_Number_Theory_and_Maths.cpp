@@ -1070,7 +1070,7 @@ Time Complexity: O(1)
 
 
 
-/*XOR and AND
+/*XOR and AND ⭐
 
 Time-Limit: 3 sec Score: 1.00/100
 Difficulty : 
@@ -1372,7 +1372,7 @@ then calculate the answer for the same array with highestBit-1 as
 the new highestBit possible.*/
 
 
-/*Bitwise Operations
+/*Bitwise Operations ⭐(bitman)
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : ***
@@ -1517,7 +1517,7 @@ then it is always optimal to increase the largest value as much as you can,
 then increase the 2nd largest value and so on.*/
 
 
-/*XOR AND OR Query
+/*XOR AND OR Query ⭐ (bit man)
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : 

@@ -828,7 +828,7 @@ signed main()
 
 */
 
-/* Median of Subarray Sum
+/* Median of Subarray Sum ⭐
 
     Time-Limit: 2 sec Score: 0.00/100
 
@@ -1199,7 +1199,7 @@ signed main()
 
 
 
-/* Count Unique Char in Substrings
+/* Count Unique Char in Substrings ⭐
 
     Time-Limit: 2 sec Score: 0.00/100
 
@@ -1382,7 +1382,7 @@ signed main(){
 }
 
 
-/* Count Distinct Char in Substrings
+/* Count Distinct Char in Substrings ⭐
 
     Time-Limit: 2 sec Score: 0.00/100
 

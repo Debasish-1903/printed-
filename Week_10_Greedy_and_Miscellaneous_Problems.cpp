@@ -1,3 +1,6 @@
+
+all materials on the platform is important
+
 /*Question 1
 
 Given n job activities with their start time and finish time. Find
@@ -538,7 +541,7 @@ int solve(int X, int Y) {
 }
 
 
-/*Minimum Operation Conversion
+/*Minimum Operation Conversion ⭐
 
 Time-Limit: 5 sec Score: 75.00/100
 Difficulty : ***
@@ -787,7 +790,7 @@ void solve(){
 }
 
 
-/*Meet at a Point
+/*Meet at a Point⭐
 
 Time-Limit: 2 sec Score: 100.00/100
 Difficulty : **
@@ -899,7 +902,7 @@ cout<<ans<<nl;
 
 
 
-/*Substring Removal
+/*Substring Removal ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : ***
@@ -1103,7 +1106,7 @@ cout<<ans<<nl;
 }
 
 
-/*Make it smooth
+/*Make it smooth ⭐
 
 Time-Limit: 1 sec Score: 50.00/100
 Difficulty : *
@@ -1194,7 +1197,7 @@ void solve(){
   
 }
 
-/*Selling cookies
+/*Selling cookies ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -1588,7 +1591,7 @@ It can be either of the 2 extremes, either all in one or equally distributed.
 
 */
 
-/*Destroying intervals
+/*Destroying intervals ⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : 

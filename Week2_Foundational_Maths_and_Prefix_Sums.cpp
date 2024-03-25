@@ -1,4 +1,4 @@
-/*Can You Make C
+/*Can You Make C⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -453,7 +453,7 @@ void solve(){
 }
 
 
-/*Recurring Fractions
+/*Recurring Fractions⭐
 
 Time-Limit: 1 sec Score: 75.00/100
 Difficulty : **
@@ -997,7 +997,7 @@ void solve()
     
 }
 
-/*Solve the Equation
+/*Solve the Equation ⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -1615,7 +1615,7 @@ void solve(){
 	}	
 }
 
-/*Kth Val ⭐⭐⭐⭐(imp)
+/*Kth Val ⭐(imp)
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : ***
@@ -2170,7 +2170,7 @@ signed main() {
   return 0;
 }
 
-/*Max Value in the Rectangle
+/*Max Value in the Rectangle⭐
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : 
@@ -2716,7 +2716,7 @@ void solve(){
 	cout<<cnt<<nl;	
 }
 
-/*Triangle Sum Query
+/*Triangle Sum Query ⭐
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : ****

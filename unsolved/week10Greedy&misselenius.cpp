@@ -792,7 +792,7 @@ signed main(){
 }
 
 
-/* Palindrome swaps
+/* Palindrome swaps ⭐
 
     Time-Limit: 1 sec Score: 0.00/100
 
@@ -804,7 +804,8 @@ Description
 
 X wants to transform a given string s into a palindrome. 
 
-X can interchange the position of any two adjacent characters of the string. X can do this as many time as it wants. What is the minimum number of times it must do this to get a palindrome. In case it's impossible, output -1.
+X can interchange the position of any two adjacent characters of the string. X can do this as many time as it wants.
+What is the minimum number of times it must do this to get a palindrome. In case it's impossible, output -1.
 
 Input Format
 
@@ -1383,7 +1384,7 @@ signed main(){
 }
 
 
-/* Kill Monsters
+/* Kill Monsters ⭐
 
     Time-Limit: 1 sec Score: 0.00/100
 
@@ -1947,7 +1948,7 @@ watch on youtube or google;
 //idias based on fraction:
 
 
-/* Pair Products
+/* Pair Products ⭐
 
     Time-Limit: 2 sec Score: 0.00/100
 
@@ -2067,7 +2068,7 @@ signed main(){
     return 0;
 }
 
-/* Find the Subset
+/* Find the Subset ⭐
 
     Time-Limit: 1 sec Score: 0.00/100
 

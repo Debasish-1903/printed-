@@ -701,6 +701,32 @@ else if(ans==0){cout<<ans<<nl;}
 	
 }
 
+/*approach:
+If for a number X, the difference between X and the sum of its digits is not less than S, then for X+1 also difference
+will not be less than S. Can you prove it?
+If this claim is true then use this monotone property.
+Hint 2
+
+Prove: Let F(X) represents the sum of digits of X.
+
+Since F(X+1) is not greater than F(X)+1, 
+F(X+1) ≤ F(X)+1
+X + F(X+1) ≤ F(X) + 1 + X , adding X both side
+X - F(X) ≤ X + 1 - F(X+1)
+
+then X + 1 - F(X+1) ≥ X - F(X). 
+
+and if X - F(X) ≥ S, 
+
+then X + 1 - F(X+1) ≥ S.
+Solution Approach
+
+This observation allows us to use binary search to find the minimum number X, such that the difference
+between X and the sum of its digits is not less than S. It follows the monotone property that initially 
+all numbers less than X have difference less than equal to S. So “NO”  instance holds for numbers less than X. 
+Then for all numbers ≥X “YES” instance hold. Using binary search we can find the smallest value X such that the
+“YES” instance holds. And if X ≤ N, then all numbers in the segment [X, N] have difference not less than S.*/
+
 /*Good Pairs AZ101
 
 Time-Limit: 2 sec Score: 1.00/100

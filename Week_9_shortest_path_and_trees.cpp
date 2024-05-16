@@ -424,7 +424,7 @@ signed main(){
 }
 
 
-/*Edge Reverse
+/*Edge Reverse ⭐14(01 bfs)
 
 Time-Limit: 1 sec Score: 50.00/100
 Difficulty : ** (min)
@@ -905,7 +905,7 @@ signed main(){
 	
 }
 
-/*Bellman-Ford Revisited
+/*Bellman-Ford Revisited  ⭐13 
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : **
@@ -1590,7 +1590,7 @@ O(nlogn)
 .*/
 
 
-/*All Pairs Shortest Path
+/*All Pairs Shortest Path  ⭐
 1 min. readView original
 Problem Code     *****()std
 
@@ -1753,7 +1753,7 @@ signed main(){
 	
 	
 }
-
+⭐
 
 /*The process of removing vertices from the present to the future is equivalent to adding vertices from the future to the present.
 Therefore, the problem can be reframed as follows: Start from the future, progressively add vertices, and eventually reconstruct the graph as provided in the input.
@@ -1842,7 +1842,7 @@ int main()
 
 
 
-// dsu by rank 
+// dsu by rank  ⭐
 
 
 #include<bits/stdc++.h>
@@ -2036,7 +2036,7 @@ signed main(){
 
 /*
 
-Disjoint Union
+Disjoint Union  ⭐18
 
 Time-Limit: 0.2 sec Score: 100.00/100
 Difficulty : *(min)
@@ -2250,7 +2250,7 @@ signed main(){
 }
 
 
-/* Tree Diameter - I
+/* Tree Diameter - I  16⭐
 
     Time-Limit: 1 sec Score: 100.00/100
 
@@ -2401,7 +2401,7 @@ solve();
     
 }
 
-/* Center of Tree
+/* Center of Tree ⭐
 
     Time-Limit: 1 sec Score: 75.00/100
 
@@ -2558,7 +2558,7 @@ solve();
     
 }
 
-/* Tree Diameter - II
+/* Tree Diameter - II  ⭐
 
     Time-Limit: 1 sec Score: 1.00/100
 
@@ -3171,7 +3171,7 @@ weights and using the Union-Find data structure, we ensure
 */
 
 
-/* Weighted Union Find Trees
+/* Weighted Union Find Trees ⭐
 
     Time-Limit: 0.3 sec Score: 1.00/100
 
@@ -3875,7 +3875,7 @@ signed main() {
 
 
 
-/* Centroid
+/* Centroid ⭐
 
     Time-Limit: 1 sec Score: 1.00/100
 
@@ -4031,7 +4031,7 @@ Time Complexity : DFS ~ O(N+M)*/
 
 
 
-/* Complete the Game
+/* Complete the Game ⭐17(dag)
 
     Time-Limit: 2 sec Score: 1.00/100
 

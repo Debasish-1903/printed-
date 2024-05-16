@@ -1,4 +1,4 @@
-/*Find the Number of Rooms
+/*Find the Number of Rooms 1⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -94,7 +94,7 @@ int main() {
 }
 
 
-/*Round Trip
+/*Round Trip 2⭐
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -185,12 +185,30 @@ void dfs(ll node,ll par){
 	//	return;
 		
 		}
-		
+		               
 	
-
+                              
 }
 
-	vis[node]=2;		
+        
+	vis[node]=2;	 // no need of this line in optimized code
+	
+	 // optimization
+	//for(auto it:g[node]){
+        
+  //       if(it==par[node])continue;
+       
+  //       if(vis[it]==1){
+  //           is_cycle=1;
+  //           return;
+  //       }
+  //        if(vis[it]==0){
+            
+  //           dfs(it,node);
+  //       }
+        
+        
+  //   }
 	
 
 	
@@ -226,6 +244,15 @@ void solve(){
 			dfs(i,0);
 		}
 	}
+
+	// //optmization 
+	//for(ll i=1;i<=n;i++){
+     
+ //      if(is_cycle==0&&vis[i]==0){
+ //        dfs(i,0);
+ //      }
+    
+ //   }
 	
 	
 		if(is_cycle==0){
@@ -244,7 +271,7 @@ void solve(){
 }
 
 
-/*Easy Graph Queries
+/*Easy Graph Queries 4⭐
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : *
@@ -400,7 +427,7 @@ void solve(){
 		
 }
 
-/*One Edge
+/*One Edge ⭐5
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : **
@@ -544,7 +571,7 @@ int main() {
 }
 
 
-/*Round Trip II
+/*Round Trip II ⭐8
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -680,7 +707,7 @@ void solve(){
 }
 
 
-/*Save Yourself
+/*Save Yourself ⭐9
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : **
@@ -1070,7 +1097,7 @@ g[b].pb(a);
 }
 
 
-/*Creating Teams
+/*Creating Teams ⭐3
 
 Time-Limit: 1 sec Score: 50.00/100
 Difficulty : *
@@ -1293,7 +1320,7 @@ cout<<mx;
 }
 
 
-/*Area and Perimeter of Connected Components
+/*Area and Perimeter of Connected Components ⭐7
 
 Time-Limit: 2 sec Score: 1.00/100
 Difficulty : ****
@@ -1567,7 +1594,7 @@ O(N^2)*/
 
 
 
-/*Smallest Permutation
+/*Smallest Permutation ⭐ 15
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : **
@@ -1921,7 +1948,7 @@ O(N∗(N+M)).
 
 */
 
-/*Shortest Path I
+/*Shortest Path I ⭐10
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -2080,7 +2107,7 @@ The priority queue is used to efficiently retrieve the vertex with the
 */
 
 
-/*Vertical Grid (day 5 archived unsolved)
+/*Vertical Grid (day 5 archived unsolved)   ⭐6
 
 Time-Limit: 2 sec Score: 0.00/100
 Difficulty :*** 

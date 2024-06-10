@@ -95,7 +95,7 @@ void solve(){
 }
 
 
-/*Number of Divisors AZ101
+/*Number of Divisors AZ101 *
 
 Time-Limit: 1 sec Score: 100.00/100
 Difficulty : 
@@ -171,7 +171,7 @@ void solve(){
 		
 }
 
-/*Prime Check AZ101
+/*Prime Check AZ101 *
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : *
@@ -279,7 +279,7 @@ int main() {
   return 0;
 } 
 
-/*Exponentiation AZ101
+/*Exponentiation AZ101 *
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : **
@@ -2063,7 +2063,7 @@ signed main() {
 }
 
 
-/*Rectangle Sum Query
+/*Rectangle Sum Query *
 
 Time-Limit: 4 sec Score: 1.00/100
 Difficulty : 
@@ -2606,7 +2606,7 @@ cout<<nl;
 }
 
 
-/*Powers of Two
+/*Powers of Two *
 
 Time-Limit: 1 sec Score: 1.00/100
 Difficulty : 
@@ -2905,7 +2905,7 @@ while(q--){
 
 
 
-/*Multiply Sum Query (unsolved)
+/*Multiply Sum Query (unsolved) *
 
 Time-Limit: 4 sec Score: 0.00/100
 Difficulty : ***

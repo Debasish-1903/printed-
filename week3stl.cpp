@@ -913,7 +913,7 @@ signed main(){
 }
 
 
-/* Queue using 2 Stacks AZ101
+/* Queue using 2 Stacks AZ101 *
 
     Time-Limit: 1 sec Score: 100.00/100
 

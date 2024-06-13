@@ -983,6 +983,55 @@ Note
 */
 
 
+//using 2 stack :
+class MyQueue {
+public:
+
+stack<int>s1,s2;
+
+    MyQueue() {
+        
+       
+    }
+    
+    void push(int x) {
+        
+        //stored in s2 stack :
+        
+        while(!s1.empty()){
+            s2.push(s1.top());
+            s1.pop();
+        }
+
+s1.push(x);
+//stored in s1 stack in correct order 
+      while(!s2.empty()){
+        s1.push(s2.top());
+        s2.pop();
+      }
+       
+
+    }
+    
+    int pop() {
+        int frnt=s1.top();
+        s1.pop();
+        return frnt;
+        
+    }
+    
+    int peek() {
+        return s1.top();
+        
+    }
+    
+    bool empty() {
+        if(s1.empty())return true;
+        else return false;
+    }
+};
+
+// /// .....
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -2653,7 +2702,7 @@ signed main(){
 
 
 
-/* Set Queries AZ101
+/* Set Queries AZ101 *
 
     Time-Limit: 1 sec Score: 1.00/100
 
